@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Login";
+
+}
+<head>
+    <link rel="stylesheet" href="./css/Index.css" />
+</head>
+<div class="vh-100 wb-position body">
+    <div class="wb-form">
+        <h1 id="index-heading" class="ff-tnr">Welcome to GameSpy</h1>
+        <img alt="Loading..." src="./assets/noun-incognito-582405.png" style="width: 300px; height: 300px" />
+        <div class="">
+            <a type="button" class="buttons ff-tnr" id="login" asp-area="Identity" asp-page="/Account/Login">Log in</a>
+            <a type="button" class="buttons ff-tnr" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </div>
+    </div>
+</div>
