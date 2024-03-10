@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ld7vUuJaGiuBZb3Q0g4KyLP4W+AehGhx1cf+E53VO8g=",
+  "Hash": "3Jk7BJCJGQ4t5gj24x4f9RfVGyPjHYWBMN3mHeunNZA=",
   "Source": "GameSpy",
   "BasePath": "_content/GameSpy",
   "Mode": "Default",
@@ -1404,12 +1404,12 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\UserStyle.css",
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\userCss.css",
       "SourceId": "GameSpy",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
       "BasePath": "_content/GameSpy",
-      "RelativePath": "css/UserStyle.css",
+      "RelativePath": "css/userCss.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1420,7 +1420,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\UserStyle.css"
+      "OriginalItemSpec": "wwwroot\\css\\userCss.css"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\favicon.ico",

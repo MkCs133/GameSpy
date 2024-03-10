@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using GameSpy.Data;
 using GameSpy.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,11 +6,11 @@ namespace GameSpy.Service.PcS
 {
     public class PcService : IPcService
     {
-        private readonly GamespyContext _context;
+        private readonly GameSpyContext _context;
         private readonly IMapper _mapper;
 
 
-        public PcService(GamespyContext context, IMapper mapper)
+        public PcService(GameSpyContext context, IMapper mapper)
         {
             this._context = context;
             this._mapper = mapper;

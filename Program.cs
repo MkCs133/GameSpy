@@ -1,19 +1,28 @@
+using GameSpy.Areas.Identity.Data;
+using GameSpy.Models;
+using GameSpy.Service.GameS;
+using GameSpy.Service.PcS;
+using GameSpy.Service.UserS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using GameSpy.Data;
-using GameSpy.Areas.Identity.Data;
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("IdentityContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityContextConnection' not found.");
+var connectionString = builder.Configuration.GetConnectionString("GameSpyContextConnection") ?? throw new InvalidOperationException("Connection string 'GameSpyContextConnection' not found.");
 
-builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlServer(connectionString));
-
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddSignInManager<MySignInManager>()
-    .AddEntityFrameworkStores<IdentityContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<GameSpyContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<GameSpyContext>()
+    .AddSignInManager<MySIgnInManager>();
+
 builder.Services.AddAutoMapper(typeof(Program));
+
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<IPcService, PcService>();
 
 var app = builder.Build();
 
@@ -30,12 +39,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.MapRazorPages();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.MapRazorPages();
 
 app.Run();

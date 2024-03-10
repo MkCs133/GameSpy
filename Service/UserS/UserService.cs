@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using GameSpy.Data;
 using GameSpy.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,15 +8,15 @@ namespace GameSpy.Service.UserS
 {
     public class UserService : IUserService
     {
-        private readonly IdentityContext _context;
+        private readonly GameSpyContext _context;
         private readonly IMapper _mapper;
 
-        public UserService(IdentityContext context, IMapper mapper)
+        public UserService(GameSpyContext context, IMapper mapper)
         {
             this._mapper = mapper;
             this._context = context;
         }
-        public async Task AddUser(User user)
+        public async Task AddUser(AppUser user)
         {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
@@ -43,7 +42,7 @@ namespace GameSpy.Service.UserS
             }
         }
 
-        public async Task<List<IdentityUser>> GetAllUsers()
+        public async Task<List<AppUser>> GetAllUsers()
         {
 
             var allUsers = await _context.Users.ToListAsync();
@@ -51,7 +50,7 @@ namespace GameSpy.Service.UserS
             return allUsers;
         }
 
-        public async Task<IdentityUser> GetUserById(string id)
+        public async Task<AppUser> GetUserById(string id)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
 
@@ -66,7 +65,7 @@ namespace GameSpy.Service.UserS
             }
         }
 
-        public async Task UpdateUser(string id, User updatedUser)
+        public async Task UpdateUser(string id, AppUser updatedUser)
         {
             var user =  await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
 
@@ -76,7 +75,7 @@ namespace GameSpy.Service.UserS
                 if (user == null)
                     throw new Exception("This user does not exist!!!");
 
-                _mapper.Map<User, User>(updatedUser, (User)user);
+                _mapper.Map<AppUser, AppUser>(updatedUser, user);
 
                 await _context.SaveChangesAsync();
 

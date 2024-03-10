@@ -15,5 +15,5 @@ public partial class Achievement
 
     public virtual Game Game { get; set; } = null!;
 
-    public virtual ICollection<User> Users { get; set; } = new List<User>();
+    public virtual ICollection<AppUser> Users { get; set; } = new List<AppUser>();
 }

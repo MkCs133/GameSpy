@@ -6,10 +6,10 @@ namespace GameSpy.Service.GameS
 {
     public class GameService : IGameService
     {
-        private readonly GamespyContext _context;
+        private readonly GameSpyContext _context;
         private readonly IMapper _mapper;
 
-        public GameService(GamespyContext context, IMapper mapper)
+        public GameService(GameSpyContext context, IMapper mapper)
         {
             this._context = context;
             this._mapper = mapper;

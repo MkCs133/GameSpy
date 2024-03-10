@@ -17,7 +17,7 @@ public partial class Pc
 
     public int Motherboardid { get; set; }
 
-    public int Userid { get; set; }
+    public string Userid { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -43,5 +43,5 @@ public partial class Pc
 
     public virtual ICollection<Storage> Storages { get; set; } = new List<Storage>();
 
-    public virtual User User { get; set; } = null!;
+    public virtual AppUser User { get; set; } = null!;
 }

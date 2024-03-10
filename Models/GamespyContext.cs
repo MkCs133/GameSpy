@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using GameSpy.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameSpy.Models;
 
-public partial class GamespyContext : IdentityContext
-
+public partial class GameSpyContext : DbContext
 {
+    public GameSpyContext()
+    {
+    }
 
-    public GamespyContext(DbContextOptions<GamespyContext> options)
+    public GameSpyContext(DbContextOptions<GameSpyContext> options)
         : base(options)
     {
     }
@@ -30,12 +31,9 @@ public partial class GamespyContext : IdentityContext
 
     public virtual DbSet<Storage> Storages { get; set; }
 
-    public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<AppUser> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-8LRAK3D\\SQLEXPRESS;Database=GAMESPY;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True");
-
+    public DbSet<Microsoft.AspNetCore.Identity.IdentityUserClaim<string>> IdentityUserClaims { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Achievement>(entity =>
@@ -67,15 +65,15 @@ public partial class GamespyContext : IdentityContext
             entity.HasMany(d => d.Users).WithMany(p => p.Achievements)
                 .UsingEntity<Dictionary<string, object>>(
                     "UserAchievement",
-                    r => r.HasOne<User>().WithMany()
+                    r => r.HasOne<AppUser>().WithMany()
                         .HasForeignKey("Userid")
                         .OnDelete(DeleteBehavior.ClientSetNull)
                         .HasConstraintName("FK_USER_ACH_USER_ACHI_USER"),
                     l => l.HasOne<Achievement>().WithMany()
                         .HasForeignKey("Achievementsid")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK_USER_ACH_USER_ACHI_ACHIEVEM"),
-                    j =>
+                        .HasConstraintName("FK_USER_ACH_USER_ACHI_ACHIEVEM")
+                    /*j =>
                     {
                         j.HasKey("Achievementsid", "Userid");
                         j.ToTable("USER_ACHIEVEMENTS");
@@ -83,7 +81,7 @@ public partial class GamespyContext : IdentityContext
                         j.HasIndex(new[] { "Achievementsid" }, "USER_ACHIEVEMENTS_FK");
                         j.IndexerProperty<int>("Achievementsid").HasColumnName("ACHIEVEMENTSID");
                         j.IndexerProperty<int>("Userid").HasColumnName("USERID");
-                    });
+                    }*/);
         });
 
         modelBuilder.Entity<Cpu>(entity =>
@@ -324,16 +322,16 @@ public partial class GamespyContext : IdentityContext
                 .HasConstraintName("FK_STORAGE_PC_STORAG_PC");
         });
 
-        modelBuilder.Entity<User>(entity =>
+        modelBuilder.Entity<AppUser>(entity =>
         {
             entity.ToTable("USER");
 
-            entity.Property(e => e.Userid)
+            entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("USERID");
-            entity.Property(e => e.Balence)
+            entity.Property(e => e.Balance)
                 .HasColumnType("decimal(5, 2)")
-                .HasColumnName("BALENCE");
+                .HasColumnName("BALANCE");
             entity.Property(e => e.Firstname)
                 .HasMaxLength(60)
                 .IsUnicode(false)

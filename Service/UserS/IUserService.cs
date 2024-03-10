@@ -5,11 +5,11 @@ namespace GameSpy.Service.UserS
 {
     public interface IUserService
     {
-        Task<IdentityUser> GetUserById(string id);
-        Task<List<IdentityUser>> GetAllUsers();
-        Task UpdateUser(string id, User updatedUser);
+        Task<AppUser> GetUserById(string id);
+        Task<List<AppUser>> GetAllUsers();
+        Task UpdateUser(string id, AppUser updatedUser);
         Task DeleteUser(string id);
-        Task AddUser(User user);
+        Task AddUser(AppUser user);
 
 
     }

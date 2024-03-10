@@ -7,7 +7,7 @@ public partial class Game
 {
     public int Gameid { get; set; }
 
-    public int? Userid { get; set; }
+    public string? Userid { get; set; }
 
     public int? Pcid { get; set; }
 
@@ -23,5 +23,5 @@ public partial class Game
 
     public virtual Pc? Pc { get; set; }
 
-    public virtual User? User { get; set; }
+    public virtual AppUser? User { get; set; }
 }

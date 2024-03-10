@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using GameSpy.Models;
+using Humanizer;
 
 namespace GameSpy.Helpers
 {
@@ -7,9 +8,9 @@ namespace GameSpy.Helpers
     {
         public MappingProfiles()
         {
-            CreateMap<User, User>();
-            CreateMap<Pc, Pc>();
+            CreateMap<AppUser, AppUser>();
             CreateMap<Game, Game>();
+            CreateMap<Pc, Pc>();
         }
     }
 }

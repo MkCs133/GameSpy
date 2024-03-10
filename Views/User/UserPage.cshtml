@@ -1,160 +1,153 @@
-﻿ @page "/UserPage"
-@using Microsoft.AspNetCore.Identity
+﻿@model GameSpy.Models.AppUser
+@using GameSpy.Areas.Identity.Data
+@using Microsoft.AspNetCore.Identity;
 
-
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
-
-
-@inject UserManager<IdentityUser> userManager;
+@inject MySIgnInManager SignInManager
+@inject UserManager<AppUser> userManager;
 
 <head>
-    <link rel="stylesheet" href="~/css/UserStyle.css" />
+    <link rel="stylesheet" href="~/css/userCss.css" />
 </head>
 
-@if (SignInManager.IsSignedIn(User))
-{
-    <body>
-        <div class="column">
-            <div class="container-fluid bg-light p-0 vh-100 d-grid mainPanel">
-                <div class="leftSideBar bg-dark">
-                    <div class="userInfo">
-                        <img src="~/assets/profileLogo.png" />
-                        <a id="logoutButton"></a>
-                        <a id="addBalanceButton"></a>
-                        <div class="d-flex usernameHolder">
-                            <p>Username:  </p>
-                            <label>@userManager.GetUserName(User)</label>
-                        </div>
-                        <div class="d-flex mailHolder">
-                            <p>E-Mail:  </p>
-                        </div>
-                        <div class="d-flex balanceHolder">
-                            <p>Balance:  </p>
-                            <label>00.00$</label>
-                        </div>
+<body>
+    <div class="column">
+        <div class="container-fluid bg-light p-0 vh-100 d-grid mainPanel">
+            <div class="leftSideBar bg-dark">
+                <div class="userInfo">
+                    <img src="~/assets/profileLogo.png" />
+                    <a id="logoutButton"></a>
+                    <a id="addBalanceButton"></a>
+                    <div class="d-flex usernameHolder">
+                        <p>Username:  @userManager.GetUserName(User)</p>
                     </div>
-                    <div class="gameListHolder py-3 bg-dark">
-                        <h2>Played Games</h2>
-                        <div class="h-75">
-                            <div class="list-group overflow-auto h-100">
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                                <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            </div>
-                        </div>
+                    <div class="d-flex mailHolder">
+                        <p>E-Mail: @Model.Email</p>
+                    </div>
+                    <div class="d-flex balanceHolder">
+                        <p>Balance:  </p>
+                        <label>@Model.Balance</label>
                     </div>
                 </div>
-                <div class="gameDescription">
-                    <img src="/assets/Grand-Theft-Auto-V-Cover.svg" />
-                    <label id="gameName">
-                        GTA V
-                    </label>
-                    <label id="gameProducer">
-                        Rockstar Games
-                    </label>
-                    <label id="gameRating">
-                        9.8 ★
-                    </label>
-                </div>
-                <div class="gameInfo">
-                    <div class="friendsHolder bg-dark">
-                        <img href="#" src="~/assets/friend.png" />
-                        <img href="#" src="~/assets/friend.png" />
-                        <img href="#" src="~/assets/friend.png" />
-                        <img href="#" src="~/assets/friend.png" />
-                    </div>
-                    <div class="achievements bg-dark list-group overflow-auto">
-                        <a href="#" class="achievement list-group-item list-group-item-action ">
-                            <img href="#" src="~/assets/achievement.png" />
-                            <h2>SHARP SHOOTER</h2>
-                            <p>
-                                It is a long established fact that a reader will be
-                                distracted by the readable content of a page when looking at its layout.
-                            </p>
-                        </a>
-                        <a href="#" class="achievement list-group-item list-group-item-action ">
-                            <img href="#" src="~/assets/achievement.png" />
-                            <h2>SHARP SHOOTER</h2>
-                            <p>
-                                It is a long established fact that a reader will be
-                                distracted by the readable content of a page when looking at its layout.
-                            </p>
-                        </a>
-                        <a href="#" class="achievement list-group-item list-group-item-action ">
-                            <img href="#" src="~/assets/achievement.png " />
-                            <h2>SHARP SHOOTER</h2>
-                            <p>
-                                It is a long established fact that a reader will be
-                                distracted by the readable content of a page when looking at its layout.
-                            </p>
-                        </a>
-                        <a href="#" class="achievement list-group-item list-group-item-action ">
-                            <img href="#" src="~/assets/achievement.png" />
-                            <h2>SHARP SHOOTER</h2>
-                            <p>
-                                It is a long established fact that a reader will be
-                                distracted by the readable content of a page when looking at its layout.
-                            </p>
-                        </a>
-                        <a href="#" class="achievement list-group-item list-group-item-action ">
-                            <img href="#" src="~/assets/achievement.png" />
-                            <h2>SHARP SHOOTER</h2>
-                            <p>
-                                It is a long established fact that a reader will be
-                                distracted by the readable content of a page when looking at its layout.
-                            </p>
-                        </a>
+                <div class="gameListHolder py-3 bg-dark">
+                    <h2>Played Games</h2>
+                    <div class="h-75">
+                        <div class="list-group overflow-auto h-100">
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="gameDescription">
+                <img src="/assets/Grand-Theft-Auto-V-Cover.svg" />
+                <label id="gameName">
+                    GTA V
+                </label>
+                <label id="gameProducer">
+                    Rockstar Games
+                </label>
+                <label id="gameRating">
+                    9.8 ★
+                </label>
+            </div>
+            <div class="gameInfo">
+                <div class="friendsHolder bg-dark">
+                    <img href="#" src="~/assets/friend.png" />
+                    <img href="#" src="~/assets/friend.png" />
+                    <img href="#" src="~/assets/friend.png" />
+                    <img href="#" src="~/assets/friend.png" />
+                </div>
+                <div class="achievements bg-dark list-group overflow-auto">
+                    <a href="#" class="achievement list-group-item list-group-item-action ">
+                        <img href="#" src="~/assets/achievement.png" />
+                        <h2>@userManager.GetUserName(User)</h2>
+                        <p>
+                            It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </a>
+                    <a href="#" class="achievement list-group-item list-group-item-action ">
+                        <img href="#" src="~/assets/achievement.png" />
+                        <h2>SHARP SHOOTER</h2>
+                        <p>
+                            It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </a>
+                    <a href="#" class="achievement list-group-item list-group-item-action ">
+                        <img href="#" src="~/assets/achievement.png " />
+                        <h2>SHARP SHOOTER</h2>
+                        <p>
+                            It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </a>
+                    <a href="#" class="achievement list-group-item list-group-item-action ">
+                        <img href="#" src="~/assets/achievement.png" />
+                        <h2>SHARP SHOOTER</h2>
+                        <p>
+                            It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </a>
+                    <a href="#" class="achievement list-group-item list-group-item-action ">
+                        <img href="#" src="~/assets/achievement.png" />
+                        <h2>SHARP SHOOTER</h2>
+                        <p>
+                            It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </a>
+                </div>
+            </div>
         </div>
-    </body>
-}
+    </div>
+</body>

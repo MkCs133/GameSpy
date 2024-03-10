@@ -13,9 +13,9 @@ public partial class Ram
 
     public string Model { get; set; } = null!;
 
-    public int Capacity { get; set; }
+    public decimal Capacity { get; set; }
 
-    public int Speed { get; set; }
+    public decimal Speed { get; set; }
 
     public virtual Pc? Pc { get; set; }
 
