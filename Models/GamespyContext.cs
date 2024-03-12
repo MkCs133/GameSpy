@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameSpy.Models;
 
-public partial class GameSpyContext : DbContext
+public partial class GameSpyContext : IdentityDbContext<AppUser>
 {
     public GameSpyContext()
     {
@@ -36,6 +37,7 @@ public partial class GameSpyContext : DbContext
     public DbSet<Microsoft.AspNetCore.Identity.IdentityUserClaim<string>> IdentityUserClaims { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Achievement>(entity =>
         {
             entity.HasKey(e => e.Achievementsid);
@@ -72,16 +74,16 @@ public partial class GameSpyContext : DbContext
                     l => l.HasOne<Achievement>().WithMany()
                         .HasForeignKey("Achievementsid")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK_USER_ACH_USER_ACHI_ACHIEVEM")
-                    /*j =>
+                        .HasConstraintName("FK_USER_ACH_USER_ACHI_ACHIEVEM"),
+                    j =>
                     {
                         j.HasKey("Achievementsid", "Userid");
                         j.ToTable("USER_ACHIEVEMENTS");
                         j.HasIndex(new[] { "Userid" }, "USER_ACHIEVEMENTS2_FK");
                         j.HasIndex(new[] { "Achievementsid" }, "USER_ACHIEVEMENTS_FK");
-                        j.IndexerProperty<int>("Achievementsid").HasColumnName("ACHIEVEMENTSID");
-                        j.IndexerProperty<int>("Userid").HasColumnName("USERID");
-                    }*/);
+                        j.IndexerProperty<int?>("Achievementsid").HasColumnName("ACHIEVEMENTSID");
+                        j.IndexerProperty<string?>("Userid").HasColumnName("USERID");
+                    });
         });
 
         modelBuilder.Entity<Cpu>(entity =>

@@ -66,6 +66,20 @@ namespace GameSpy.Service.GameS
             }
         }
 
+        public async Task<List<Game>> GetUsersGames(string userId)
+        {
+            List<Game> userGames = new List<Game>();
+            var games = GetAllGames();
+            foreach (Game game in await games)
+            {
+                if (game.Userid == userId)
+                {
+                    userGames.Add(game);    
+                }
+            }
+            return userGames;
+        }
+
         public async Task UpdateGame(int id, Game newGame)
         {
             var game = await _context.Games.FirstOrDefaultAsync(g => g.Gameid == id);

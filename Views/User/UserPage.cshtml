@@ -32,56 +32,10 @@
                     <h2>Played Games</h2>
                     <div class="h-75">
                         <div class="list-group overflow-auto h-100">
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Gta V</a>
+                            @foreach(Game games in Model.Games)
+                            {
+                                <a href="#" class="list-group-item list-group-item-action ">@games.Name</a>
+                            }
                         </div>
                     </div>
                 </div>

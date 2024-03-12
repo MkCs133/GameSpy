@@ -1,4 +1,5 @@
 ﻿using GameSpy.Models;
+using GameSpy.Service.GameS;
 using GameSpy.Service.UserS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -8,17 +9,20 @@ namespace GameSpy.Controllers
 {
     public class UserController : Controller
     {
-        private readonly IUserService _service;
+        private readonly IUserService _userService;
+        private readonly IGameService _gameService;
         private readonly UserManager<AppUser> _userManager;
 
-        public UserController(IUserService service, UserManager<AppUser> userManager)
+        public UserController(IUserService userService, UserManager<AppUser> userManager, IGameService gameService)
         {
-            this._service = service;
+            this._userService = userService;
             this._userManager = userManager;
+            this._gameService = gameService;
         }
         public async Task<IActionResult> UserPageAsync()
         {
             var user = await _userManager.GetUserAsync(User);
+            user.Games = await _gameService.GetUsersGames(user.Id);
             return View(user);
         }
     }
