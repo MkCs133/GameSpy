@@ -17,15 +17,13 @@ public partial class Pc
 
     public int Motherboardid { get; set; }
 
-    public string Userid { get; set; }
+    public string Userid { get; set; } = null!;
 
     public string Name { get; set; } = null!;
 
     public virtual Cpu Cpu { get; set; } = null!;
 
     public virtual ICollection<Cpu> Cpus { get; set; } = new List<Cpu>();
-
-    public virtual ICollection<Game> Games { get; set; } = new List<Game>();
 
     public virtual Gpu Gpu { get; set; } = null!;
 
@@ -44,4 +42,6 @@ public partial class Pc
     public virtual ICollection<Storage> Storages { get; set; } = new List<Storage>();
 
     public virtual AppUser User { get; set; } = null!;
+
+    public virtual ICollection<Game> Games { get; set; } = new List<Game>();
 }

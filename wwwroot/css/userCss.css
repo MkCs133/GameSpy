@@ -22,188 +22,132 @@ li {
     border: 2px solid #e5c9c9;
 }
 
-.leftSideBar {
-    background-color: #221e1e;
-    grid-area: a;
-    display: block;
+.userInfo {
+    display: grid;
+    grid-template:  "a b c"
+                    "d e f"
+                    "g g g";
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 15% 1fr 25%;
     font-size: 10pt;
 }
-    .userInfo {
-        height: 26%;
-        border: 2px solid #e5c9c9;
-        display: grid;
-        grid-template: "a b c d"
-            "e e e e"
-            "f f f f"
-            "g g g g";
-        grid-template-columns: 50% 1fr 20% 20%;
-        grid-template-rows: 50% 16% 16% 18%;
-        font-size: 10pt;
-        color: #e5c9c9;
-    }
 
-        .userInfo img {
-            grid-area: a;
-            height: 105px;
-            width: 105px;
-            padding: 2px;
-            margin: 5%;
-            border-radius: 20%;
-            
-        }
-
-        .userInfo .usernameHolder {
-            grid-area: e;
-            padding: 3%;
-            border: 1px solid #e5c9c9;
-        }
-
-        .userInfo .mailHolder {
-            grid-area: f;
-            padding: 3%;
-            border: 2px solid #e5c9c9;
-        }
-
-        .userInfo .balanceHolder {
-            grid-area: g;
-            padding: 3%;
-            border: 2px solid #e5c9c9;
-        }
-
-        
-        #logoutButton {
-            grid-area: c;
-            width: 30px;
-            height: 30px;
-            background: url(../assets/exit.png);
-            background-size: cover;
-            flex-grow: 1;
-        }
-        
-        #addBalanceButton {
-            grid-area: d;
-            width: 30px;
-            height: 30px;
-            background: url(../assets/plus.png);
-            background-size: cover;
-            flex-grow: 1;
-        }
-
-
-
-    
-    .gameListHolder {
-        color: #e5c9c9;
-        height: 73%;
-        border: 1px solid #e5c9c9;
-        padding: 3px;
-    }
-
-        .gameListHolder a {
-            background-color: #221e1e;
-            color: #e5c9c9;
-            border: 1px solid #e5c9c9;
-        }
-
-    .gameDescription {
-        background-color: #221e1e;
-        grid-area: b;
-        display: grid;
-        grid-template: "a b"
-            "a c"
-            "a d"
-            "a e";
-        color: #e5c9c9;
-        grid-template-columns: 17% 1fr;
-        grid-template-rows: 40% 20% 20% 1fr;
-        border-bottom: 3px solid #e5c9c9;
-    }
-        
-        .gameDescription img {
-            justify-self: center;
-            align-self: center;
-            grid-area: a;
-            width: 200px;
-            grid-row-start: 1;
-            height: 200px;
-        }
-
-        .gameDescription label {
-            display: flex;
-            align-items: center;
-        }
-
-        .gameDescription #gameName {
-            grid-area: b;
-            font-size: 24pt;
-            font-weight: bold;
-        }
-        .gameDescription #gameProducer {
-            grid-area: c;
-            font-size: 16pt;
-        }
-        .gameDescription #gameRating {
-            grid-area: d;
-            font-size: 16pt;
-        }
-
-.gameInfo {
-    background-color: #221e1e;
-    grid-area: d;
-    display: flex;
-    flex-wrap: wrap;
+.profilePicture {
+    margin: auto;
+    width: 130px;
+    height: 130px;
+    border: 2px solid rgba(0, 184, 255, 1);
+    border-radius: 50%;
+    grid-area: e
 }
-    .friendsHolder {
-        display: flex;
-        margin: 3% 3% 3% 5%;
-        width: 90%;
-        height: 10%;
-        padding: 3px;
-        padding-left: 3%;
-        
+
+.profilePictureSettings {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(0, 184, 255, 1);
+    border-radius: 50%;
+    grid-area: e
+}
+
+.h-9 {
+    height: 9% !important
+}
+
+.h-15 {
+    height: 15% !important
+}
+
+.h-16 {
+    height: 16% !important
+}
+
+.h-20 {
+    height: 20% !important
+}
+
+.h-26 {
+    height: 26% !important
+}
+
+.h-35 {
+    height: 35% !important
+}
+
+.h-54 {
+    height: 54% !important
+}
+.userInfo > h3 {
+    grid-area: g;
+    text-align: center;
+    padding: 5px;
+}
+
+.game {
+    box-shadow: rgba(0, 184, 255, 1) 0px 5px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 130px;
+    height: 150px;
+    margin-inline: 15px;
+    margin-bottom: 15px;
+    transition-duration: 0.3s;
+}
+
+.game:hover {
+    box-shadow: rgba(255, 3, 0, 1) 2px 7px 17px;
+    border-radius: 10px;
+    width: 150px;
+    height: 170px;
+    margin-inline: 5px;
+    margin-bottom: 0px;
+}
+
+
+
+.ff-utnr {
+    font-family: 'Times New Roman';
+    color: #00b8ff;
+}
+
+.myBorder {
+    border: 1px solid #00b8ff;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border: 1px solid #00b8ff;
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border: 1px solid #00b8ff;
+    background: black;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background:#00b8ff;
     }
+.exit {
+    width:27px;
+    height:27px;
+}
+.align-text-right {
+    text-align: right;
+}
 
-        .friendsHolder img{
-            width: 50px;
-            height: 50px;
-            margin: 5px;
-        }
-
-    .achievements {
-        width: 90%;
-        height: 500px;
-        margin-left: 5%;
-        margin-top: 0px;
-        padding: 3%;
-        border: 2px solid #e5c9c9;
-    }
-
-    .achievement {
-        display: grid;
-        grid-template: "a b"
-            "a c";
-        grid-template-columns: 10% 1fr;
-        grid-template-rows: 40% 1fr;
-        border: 1px solid #e5c9c9;
-        margin-top: 1%;
-        margin-bottom: 2%;
-        background-color: #221e1e;
-    }
-
-        .achievement img {
-            grid-area: a;
-            height: 100px;
-            width:100px;
-            align-self: center;
-        }
-
-        .achievement h2 {
-            grid-area: b;
-            color: #e5c9c9;
-        }
-        .achievement p {
-            grid-area: c;
-            color: #e5c9c9;
-        }
-
-
+.icons {
+    width: 26px;
+    height:26px;
+}

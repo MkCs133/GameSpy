@@ -7,10 +7,6 @@ public partial class Game
 {
     public int Gameid { get; set; }
 
-    public string? Userid { get; set; }
-
-    public int? Pcid { get; set; }
-
     public string Name { get; set; } = null!;
 
     public string? Description { get; set; }
@@ -21,7 +17,7 @@ public partial class Game
 
     public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 
-    public virtual Pc? Pc { get; set; }
+    public virtual ICollection<Pc> Pcs { get; set; } = new List<Pc>();
 
-    public virtual AppUser? User { get; set; }
+    public virtual ICollection<AppUser> Users { get; set; } = new List<AppUser>();
 }

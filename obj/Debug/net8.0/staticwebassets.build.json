@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yW847DKnVuPIMbr8skZ98nPqPCgTh18Zqz8iaZwNllg=",
+  "Hash": "ewjEWJYbClaZSdVcxmj59w88+ysWxJa4sQMRZ7FUDdM=",
   "Source": "GameSpy",
   "BasePath": "_content/GameSpy",
   "Mode": "Default",
@@ -1233,6 +1233,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\bg2.jpg"
     },
     {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\black-and-blue-fierce-cat-oj7gfgaiyvkm2d8u.jpg",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/black-and-blue-fierce-cat-oj7gfgaiyvkm2d8u.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\black-and-blue-fierce-cat-oj7gfgaiyvkm2d8u.jpg"
+    },
+    {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\exit.png",
       "SourceId": "GameSpy",
       "SourceType": "Discovered",
@@ -1364,6 +1383,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\profileLogo.png"
+    },
+    {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\settings.png",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/settings.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\settings.png"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\Index.css",

@@ -20,6 +20,7 @@ namespace GameSpy.Service.UserS
         {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
+
         }
 
         public async Task DeleteUser(string id)

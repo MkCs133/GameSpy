@@ -10,96 +10,71 @@
 </head>
 
 <body>
-    <div class="column">
-        <div class="container-fluid bg-light p-0 vh-100 d-grid mainPanel">
-            <div class="leftSideBar bg-dark">
-                <div class="userInfo">
-                    <img src="~/assets/profileLogo.png" />
-                    <a id="logoutButton"></a>
-                    <a id="addBalanceButton"></a>
-                    <div class="d-flex usernameHolder">
-                        <p>Username:  @userManager.GetUserName(User)</p>
-                    </div>
-                    <div class="d-flex mailHolder">
-                        <p>E-Mail: @Model.Email</p>
-                    </div>
-                    <div class="d-flex balanceHolder">
-                        <p>Balance:  </p>
-                        <label>@Model.Balance</label>
-                    </div>
+    <div class="container-fluid d-flex vh-100 bg-black p-0">
+        <div class="col-2 myBorder">
+            <div class="w-100 p-3 d-flex">
+                <div class="flex-grow-1">
+                    <h2 class=" ff-utnr">GameSpy</h2>
                 </div>
-                <div class="gameListHolder py-3 bg-dark">
-                    <h2>Played Games</h2>
-                    <div class="h-75">
-                        <div class="list-group overflow-auto h-100">
-                            @foreach(Game games in Model.Games)
-                            {
-                                <a href="#" class="list-group-item list-group-item-action ">@games.Name</a>
-                            }
-                        </div>
-                    </div>
+                <div class="flex-grow-1 align-text-right">
+                    <img class="exit" href="#" src="~/assets/exit.png"></img>
                 </div>
             </div>
-            <div class="gameDescription">
-                <img src="/assets/Grand-Theft-Auto-V-Cover.svg" />
-                <label id="gameName">
-                    GTA V
-                </label>
-                <label id="gameProducer">
-                    Rockstar Games
-                </label>
-                <label id="gameRating">
-                    9.8 ★
-                </label>
+            <div class="h-35  w-100 userInfo">
+                <img href="#" src="~/assets/friend.png" class="profilePicture"></img>
+                <h3 class="ff-utnr pt-2">UserName</h3>
             </div>
-            <div class="gameInfo">
-                <div class="friendsHolder bg-dark">
-                    <img href="#" src="~/assets/friend.png" />
-                    <img href="#" src="~/assets/friend.png" />
-                    <img href="#" src="~/assets/friend.png" />
-                    <img href="#" src="~/assets/friend.png" />
+            <div class="h-54 w-100 d-flex">
+                <div class="flex-grow-1 h-25">
+                    <p class=" ff-utnr text-center">Games</p>
+                    <p class =" ff-utnr text-center">123</p>
                 </div>
-                <div class="achievements bg-dark list-group overflow-auto">
-                    <a href="#" class="achievement list-group-item list-group-item-action ">
-                        <img href="#" src="~/assets/achievement.png" />
-                        <h2>@userManager.GetUserName(User)</h2>
-                        <p>
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </a>
-                    <a href="#" class="achievement list-group-item list-group-item-action ">
-                        <img href="#" src="~/assets/achievement.png" />
-                        <h2>SHARP SHOOTER</h2>
-                        <p>
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </a>
-                    <a href="#" class="achievement list-group-item list-group-item-action ">
-                        <img href="#" src="~/assets/achievement.png " />
-                        <h2>SHARP SHOOTER</h2>
-                        <p>
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </a>
-                    <a href="#" class="achievement list-group-item list-group-item-action ">
-                        <img href="#" src="~/assets/achievement.png" />
-                        <h2>SHARP SHOOTER</h2>
-                        <p>
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </a>
-                    <a href="#" class="achievement list-group-item list-group-item-action ">
-                        <img href="#" src="~/assets/achievement.png" />
-                        <h2>SHARP SHOOTER</h2>
-                        <p>
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </a>
+                <div class="flex-grow-1 h-25">
+                    <p class=" ff-utnr text-center">Achievements</p>
+                    <p class=" ff-utnr text-center">1234</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 myBorder px-5">
+            <div class="w-100 m-3">
+                <h2 class="ff-utnr">Recently Played</h2>
+            </div>
+            <div class="h-26 w-100 mb-2 d-inline-block">
+                @for (int i=0; i<5; i++)
+                {
+                    <img class="game mt-2" href="#" src="~/assets/bg2.jpg"></img>
+                }
+            </div>
+            <div class="h-8 pt-1">
+                <div class="h-20 w-100 px-3">
+                    <h2 class=" ff-utnr">Your Games</h2>
+                </div>
+            </div>
+            <div class="h-54 d-inline-block overflow-auto">
+                @for (int i = 0; i <= 20; i++)
+                {
+                    <img class="game mt-2" href="#" src="~/assets/bg2.jpg"></img>
+                }
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="h-9 d-flex align-items-center justify-content-end">
+                <p class="ff-utnr mx-1 mt-3">Profile</p>
+                <img href="#" src="~/assets/friend.png" class="profilePictureSettings"></img>
+            </div>
+            <div class="h-75"></div>
+            <div class="h-16 d-flex flex-column align-items-end">
+                <div class="h-25 my-1 d-flex justify-content-end w-100">
+                    <p class="ff-utnr">Settings</p>
+                    <img href="#" src="~/assets/settings.png" class="icons mx-1"></img>
+                </div>
+                <div class="h-25 my-1 d-flex justify-content-end w-100">
+                    <p class="ff-utnr">Help</p>
+                    <img href="#" src="~/assets/settings.png" class="icons mx-1"></img>
+                </div>
+                <div class="h-25 my-1 d-flex justify-content-end w-100">
+                    <p class="ff-utnr">Privacy</p>
+                    <img href="#" src="~/assets/settings.png" class="icons mx-1"></img>
                 </div>
             </div>
         </div>

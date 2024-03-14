@@ -17,7 +17,6 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
     }
 
     public virtual DbSet<Achievement> Achievements { get; set; }
-
     public virtual DbSet<Cpu> Cpus { get; set; }
 
     public virtual DbSet<Game> Games { get; set; }
@@ -34,7 +33,9 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
 
     public virtual DbSet<AppUser> Users { get; set; }
 
-    public DbSet<Microsoft.AspNetCore.Identity.IdentityUserClaim<string>> IdentityUserClaims { get; set; }
+    public virtual DbSet<UsersGames> UsersGames { get; set;}
+    public virtual DbSet<PcsGames> PcsGames { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -81,11 +82,10 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
                         j.ToTable("USER_ACHIEVEMENTS");
                         j.HasIndex(new[] { "Userid" }, "USER_ACHIEVEMENTS2_FK");
                         j.HasIndex(new[] { "Achievementsid" }, "USER_ACHIEVEMENTS_FK");
-                        j.IndexerProperty<int?>("Achievementsid").HasColumnName("ACHIEVEMENTSID");
-                        j.IndexerProperty<string?>("Userid").HasColumnName("USERID");
+                        j.IndexerProperty<int>("Achievementsid").HasColumnName("ACHIEVEMENTSID");
+                        j.IndexerProperty<string>("Userid").HasColumnName("USERID");
                     });
         });
-
         modelBuilder.Entity<Cpu>(entity =>
         {
             entity.ToTable("CPU");
@@ -117,10 +117,6 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
         {
             entity.ToTable("GAMES");
 
-            entity.HasIndex(e => e.Pcid, "PC_GAMES_FK");
-
-            entity.HasIndex(e => e.Userid, "USER_GAMES_FK");
-
             entity.Property(e => e.Gameid)
                 .ValueGeneratedNever()
                 .HasColumnName("GAMEID");
@@ -136,19 +132,28 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
                 .HasMaxLength(60)
                 .IsUnicode(false)
                 .HasColumnName("NAME");
-            entity.Property(e => e.Pcid).HasColumnName("PCID");
-            entity.Property(e => e.Rating)
-                .HasColumnType("numeric(2, 1)")
-                .HasColumnName("RATING");
+            entity.Property(e => e.Rating).HasColumnType("decimal(18, 2)");
+        });
+
+        modelBuilder.Entity<UsersGames>(entity => 
+        {
+            entity.HasKey(e => new { e.Gameid, e.Userid }).HasName("PK_USERS_GAMES");
+            entity.ToTable("USER_GAME");
+            entity.HasIndex(e => e.Userid).HasDatabaseName("USER_GAMES2_FK");
+            entity.HasIndex(e => e.Gameid).HasDatabaseName("USER_GAMES_FK");
+            entity.Property(e => e.Gameid).HasColumnName("GAMESID");
             entity.Property(e => e.Userid).HasColumnName("USERID");
+        });
 
-            entity.HasOne(d => d.Pc).WithMany(p => p.Games)
-                .HasForeignKey(d => d.Pcid)
-                .HasConstraintName("FK_GAMES_PC_GAMES_PC");
+        modelBuilder.Entity<PcsGames>(entity => 
+        {
+            entity.HasKey(e => new { e.Pcsid, e.Gamesid }).HasName("PK_PCS_GAMES");
+            entity.ToTable("PC_GAMES");
+            entity.HasIndex(e => e.Pcsid).HasDatabaseName("PC_GAMES2_FK");
+            entity.HasIndex(e => e.Gamesid).HasDatabaseName("PC_GAMES_FK");
+            entity.Property(e => e.Pcsid).HasColumnName("PCID");
+            entity.Property(e => e.Gamesid).HasColumnName("GAMEID");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Games)
-                .HasForeignKey(d => d.Userid)
-                .HasConstraintName("FK_GAMES_USER_GAME_USER");
         });
 
         modelBuilder.Entity<Gpu>(entity =>
@@ -328,12 +333,17 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
         {
             entity.ToTable("USER");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("USERID");
+            entity.HasIndex(e => e.NormalizedEmail, "EmailIndex");
+
+            entity.HasIndex(e => e.NormalizedUserName, "UserNameIndex")
+                .IsUnique()
+                .HasFilter("([NormalizedUserName] IS NOT NULL)");
+
+            entity.Property(e => e.Id).HasColumnName("USERID");
             entity.Property(e => e.Balance)
                 .HasColumnType("decimal(5, 2)")
                 .HasColumnName("BALANCE");
+            entity.Property(e => e.Email).HasMaxLength(256);
             entity.Property(e => e.Firstname)
                 .HasMaxLength(60)
                 .IsUnicode(false)
@@ -342,6 +352,9 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
                 .HasMaxLength(60)
                 .IsUnicode(false)
                 .HasColumnName("LASTNAME");
+            entity.Property(e => e.NormalizedEmail).HasMaxLength(256);
+            entity.Property(e => e.NormalizedUserName).HasMaxLength(256);
+            entity.Property(e => e.UserName).HasMaxLength(256);
         });
 
         OnModelCreatingPartial(modelBuilder);
