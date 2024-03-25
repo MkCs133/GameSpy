@@ -11,6 +11,8 @@ public partial class Game
 
     public string? Description { get; set; }
 
+    public string Image { get; set; }
+
     public decimal Rating { get; set; }
 
     public string Manufacturer { get; set; } = null!;

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ewjEWJYbClaZSdVcxmj59w88+ysWxJa4sQMRZ7FUDdM=",
+  "Hash": "v+ANmQthFjZQNcXnt5+abUe3Ee33nmYgNwR5Eyh1fBM=",
   "Source": "GameSpy",
   "BasePath": "_content/GameSpy",
   "Mode": "Default",
@@ -1290,12 +1290,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\friend.png"
     },
     {
-      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\Grand-Theft-Auto-V-Cover.svg",
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\gta_v.png",
       "SourceId": "GameSpy",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
       "BasePath": "_content/GameSpy",
-      "RelativePath": "assets/Grand-Theft-Auto-V-Cover.svg",
+      "RelativePath": "assets/gta_v.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,7 +1306,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\Grand-Theft-Auto-V-Cover.svg"
+      "OriginalItemSpec": "wwwroot\\assets\\gta_v.png"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\marketing.jpg",
@@ -1385,6 +1385,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\profileLogo.png"
     },
     {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\red_dead_redemption_2.png",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/red_dead_redemption_2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\red_dead_redemption_2.png"
+    },
+    {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\settings.png",
       "SourceId": "GameSpy",
       "SourceType": "Discovered",
@@ -1402,6 +1421,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\settings.png"
+    },
+    {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\user.png",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/user.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\user.png"
+    },
+    {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\world_of_tanks.png",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/world_of_tanks.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\world_of_tanks.png"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\Index.css",
@@ -1459,6 +1516,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\userCss.css"
+    },
+    {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\userSettings.css",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "css/userSettings.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\userSettings.css"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\UserStyle.css",

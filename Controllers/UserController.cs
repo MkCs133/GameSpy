@@ -19,11 +19,18 @@ namespace GameSpy.Controllers
             this._userManager = userManager;
             this._gameService = gameService;
         }
+        [HttpGet]
         public async Task<IActionResult> UserPageAsync()
         {
             var user = await _userManager.GetUserAsync(User);
             user.Games = await _gameService.GetUsersGames(user.Id);
             return View(user);
+        }
+
+        [HttpGet]
+        public IActionResult UserSettings() 
+        {
+            return View();
         }
     }
 }

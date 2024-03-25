@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\GameSpy.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\Grand-Theft-Auto-V-Cover.svg",
-      "PackagePath": "staticwebassets\\assets\\Grand-Theft-Auto-V-Cover.svg"
-    },
-    {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\achievement.png",
       "PackagePath": "staticwebassets\\assets\\achievement.png"
     },
@@ -29,6 +25,10 @@
       "PackagePath": "staticwebassets\\assets\\friend.png"
     },
     {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\gta_v.png",
+      "PackagePath": "staticwebassets\\assets\\gta_v.png"
+    },
+    {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\marketing.jpg",
       "PackagePath": "staticwebassets\\assets\\marketing.jpg"
     },
@@ -45,8 +45,20 @@
       "PackagePath": "staticwebassets\\assets\\profileLogo.png"
     },
     {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\red_dead_redemption_2.png",
+      "PackagePath": "staticwebassets\\assets\\red_dead_redemption_2.png"
+    },
+    {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\settings.png",
       "PackagePath": "staticwebassets\\assets\\settings.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\user.png",
+      "PackagePath": "staticwebassets\\assets\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\world_of_tanks.png",
+      "PackagePath": "staticwebassets\\assets\\world_of_tanks.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\Index.css",
@@ -63,6 +75,10 @@
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\userCss.css",
       "PackagePath": "staticwebassets\\css\\userCss.css"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\userSettings.css",
+      "PackagePath": "staticwebassets\\css\\userSettings.css"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\favicon.ico",

@@ -128,6 +128,10 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
                 .HasMaxLength(60)
                 .IsUnicode(false)
                 .HasColumnName("MANUFACTURER");
+            entity.Property(e => e.Image)
+                .HasMaxLength(60)
+                .IsUnicode(false)
+                .HasColumnName("IMAGE");
             entity.Property(e => e.Name)
                 .HasMaxLength(60)
                 .IsUnicode(false)

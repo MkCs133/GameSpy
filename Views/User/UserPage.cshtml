@@ -17,7 +17,9 @@
                     <h2 class=" ff-utnr">GameSpy</h2>
                 </div>
                 <div class="flex-grow-1 align-text-right">
-                    <img class="exit" href="#" src="~/assets/exit.png"></img>
+                    <a asp-area="Identity" asp-page="/Account/Logout">
+                        <img class="logout" href="#" src="~/assets/exit.png"></img>
+                    </a>
                 </div>
             </div>
             <div class="h-35  w-100 userInfo">
@@ -39,10 +41,17 @@
             <div class="w-100 m-3">
                 <h2 class="ff-utnr">Recently Played</h2>
             </div>
-            <div class="h-26 w-100 mb-2 d-inline-block">
-                @for (int i=0; i<5; i++)
+            <div class="h-26 d-flex w-100 overflow-auto">
+                @for (int i = 0; i < 3; i++)
                 {
-                    <img class="game mt-2" href="#" src="~/assets/bg2.jpg"></img>
+                    <figure class="mx-3">
+                        <img src="https://picsum.photos/id/287/250/300" alt="Mountains">
+                        <figcaption>The Day</figcaption>
+                    </figure>
+                    <figure style="--c:#fff5">
+                        <img src="https://picsum.photos/id/475/250/300" alt="Mountains">
+                        <figcaption>The Night</figcaption>
+                    </figure>
                 }
             </div>
             <div class="h-8 pt-1">
@@ -51,16 +60,23 @@
                 </div>
             </div>
             <div class="h-54 d-inline-block overflow-auto">
-                @for (int i = 0; i <= 20; i++)
+                @foreach (Game game in Model.Games)
                 {
-                    <img class="game mt-2" href="#" src="~/assets/bg2.jpg"></img>
+                    <div class="d-inline-block">
+                        <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
+                            <img src="~/assets/world_of_tanks.png" alt="@game.Image">
+                            <figcaption>@game.Name</figcaption>
+                        </figure>
+                    </div>
                 }
             </div>
         </div>
         <div class="col-2">
-            <div class="h-9 d-flex align-items-center justify-content-end">
-                <p class="ff-utnr mx-1 mt-3">Profile</p>
-                <img href="#" src="~/assets/friend.png" class="profilePictureSettings"></img>
+            <div class="h-9">
+                <a href="/User/UserSettings" class="d-flex align-items-center justify-content-end">
+                    <p class="ff-utnr mx-1 mt-3">Profile</p>
+                    <img href="#" src="~/assets/user.png" class="profile-picture-settings h-25"></img>
+                </a>
             </div>
             <div class="h-75"></div>
             <div class="h-16 d-flex flex-column align-items-end">
