@@ -1,37 +1,91 @@
-﻿.inline-block-container {
-    display: inline-block;
+﻿body {
+    background-color: black;
+}
+.column {
+    width: 80%;
+    height: 100px;
+    margin: 0px auto;
+    background-color: blue;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #ff0000;
 }
 
-.card {
-    position: relative;
-    width: 250px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    overflow: hidden;
-    border: 1px solid #ccc;
-    margin: 10px;
+.my-border {
+    border: 1px solid #00b8ff;
 }
 
-.card-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.ff-utnr {
+    font-family: 'Times New Roman';
+    color: #00b8ff;
 }
 
-    .card-content img {
-        width: 90%;
-        height: 100%;
-        object-fit: cover; /* Ensure the image covers the entire space */
+.profile-picture {
+    display: grid;
+    grid-template: "aaaa",
+                   "aaaa",
+                   "aaab";
+    margin: 0px 150px;
+    width: 130px;
+    height: 130px;
+    border: 2px solid rgba(0, 184, 255, 1);
+    border-radius: 50%;
+}
+
+.profile-picture img {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    width: 126px;
+    border-radius: 50%;
+    height: 127px;
+    padding: 1px;
+    z-index: 0;
+}
+
+.change-image {
+    color: #00b8ff;
+    align-content: center;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 24pt;
+    border: 1px solid #00b8ff;
+    text-align: center;
+    align-self: end;
+    grid-area: b;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+}
+
+    .change-image:hover {
+        transition-duration: 0.4s;
+        background-color: #00b8ff;
+        color: black;
     }
 
-.hover-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease;
+.central-card {
+    border-radius: 10px;
+    width: 30%;
+    height: 70vh;
 }
 
-.card:hover .hover-text {
-    opacity: 1; /* Show on hover */
+.central-card > a {
+    text-align: center;
+    align-content: center;
+}
+
+.central-card > a:hover {
+    transition-duration: 0.4s;
+    background-color: #00b8ff;
+    color: black;
+}
+
+    .central-card:last-child {
+        border-radius: 0px 0pc 10px 10px;
+    }
+
+.align-text-center {
+    text-align: center;
 }
