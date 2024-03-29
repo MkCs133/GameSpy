@@ -113,6 +113,22 @@ li {
     border: 1px solid #00b8ff;
 }
 
+.bottom-border {
+    border-bottom: 1px solid #00b8ff;
+}
+
+i {
+    color: #00b8ff;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.custom-image-size {
+    width:130px;
+    height:150px;
+}
 .align-text-center {
     text-align: center;
 }

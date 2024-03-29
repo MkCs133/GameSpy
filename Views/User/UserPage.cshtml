@@ -64,22 +64,24 @@
                 {
                     <div class="d-inline-block">
                         <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
-                            <img src="~/assets/world_of_tanks.png" alt="@game.Image">
+                            <img class="custom-image-size" src="~/assets/games/@game.Image" alt="@game.Image">
                             <figcaption>@game.Name</figcaption>
                         </figure>
                     </div>
                 }
             </div>
         </div>
-        <div class="col-2">
-            <div class="h-9">
-                <a href="/User/UserSettings" class="d-flex align-items-center justify-content-end">
-                    <p class="ff-utnr mx-1 mt-3">Profile</p>
-                    <img href="#" src="~/assets/user.png" class="profile-picture-settings h-25"></img>
-                </a>
+        <div class="col-2 my-border">
+            <div class="h-9 d-flex bottom-border px-2">
+                <div class="flex-grow-1 ff-utnr h2 mt-3">
+                    <i class="bi bi-plus-square"></i>
+                </div>
+                <div class="flex-grow-1 align-text-right ff-utnr h2 mt-3">
+                    0.00 $
+                </div>
             </div>
             <div class="h-75"></div>
-            <div class="h-16 d-flex flex-column align-items-end">
+            <div class="h-16 d-flex flex-column align-items-end px-2">
                 <div class="h-25 my-1 d-flex justify-content-end w-100">
                     <p class="ff-utnr">Settings</p>
                     <img href="#" src="~/assets/settings.png" class="icons mx-1"></img>

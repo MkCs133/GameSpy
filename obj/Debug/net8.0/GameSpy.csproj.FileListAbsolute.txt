@@ -261,3 +261,4 @@ C:\Users\goran\source\repos\GameSpy\bin\Debug\net8.0\Microsoft.Extensions.Option
 C:\Users\goran\source\repos\GameSpy\obj\Debug\net8.0\GameSpy.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\goran\source\repos\GameSpy\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\goran\source\repos\GameSpy\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\goran\source\repos\GameSpy\bin\Debug\net8.0\libman.json

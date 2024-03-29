@@ -4,6 +4,7 @@ using GameSpy.Service.UserS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Net;
 
 namespace GameSpy.Controllers
 {
@@ -18,6 +19,8 @@ namespace GameSpy.Controllers
             this._userService = userService;
             this._userManager = userManager;
             this._gameService = gameService;
+
+            ServicePointManager.Ti
         }
         [HttpGet]
         public async Task<IActionResult> UserPageAsync()
