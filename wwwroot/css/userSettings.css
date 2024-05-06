@@ -89,3 +89,55 @@
 .align-text-center {
     text-align: center;
 }
+
+.payment-grid {
+    display: grid;
+    grid-template:  "a a a"
+                    "b c c"
+                    "d d e"
+                    "f f g";
+    grid-template-columns: 1fr 20% 35%;
+    grid-template-rows: 1fr 25% 25% 25%;
+}
+
+.payment-total {
+    grid-area: a;
+}
+
+.payment-first-name {
+    grid-area: b;
+}
+
+.payment-last-name {
+    grid-area: c;
+}
+
+.payment-card-number {
+    grid-area: d;
+}
+
+.payment-cvv {
+    grid-area: e;
+}
+
+.payment-cards {
+    grid-area: f;
+}
+
+.payment-card-expire-date {
+    grid-area: g;
+}
+
+
+.payment-submit-button {
+    width: 15%;
+    height: 50px;
+    background-color: black;
+    margin: 15px auto 15px auto;
+}
+
+.payment-submit-button:hover {
+    transition-duration: 0.4s;
+    background-color: #00b8ff;
+    color: black;
+}

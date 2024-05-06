@@ -34,6 +34,7 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
     public virtual DbSet<AppUser> Users { get; set; }
 
     public virtual DbSet<UsersGames> UsersGames { get; set;}
+    public virtual DbSet<UsersAchievements> UsersAchievements { get; set;}
     public virtual DbSet<PcsGames> PcsGames { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -65,26 +66,6 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ACHIEVEM_GAME_ACHI_GAMES");
 
-            entity.HasMany(d => d.Users).WithMany(p => p.Achievements)
-                .UsingEntity<Dictionary<string, object>>(
-                    "UserAchievement",
-                    r => r.HasOne<AppUser>().WithMany()
-                        .HasForeignKey("Userid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK_USER_ACH_USER_ACHI_USER"),
-                    l => l.HasOne<Achievement>().WithMany()
-                        .HasForeignKey("Achievementsid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK_USER_ACH_USER_ACHI_ACHIEVEM"),
-                    j =>
-                    {
-                        j.HasKey("Achievementsid", "Userid");
-                        j.ToTable("USER_ACHIEVEMENTS");
-                        j.HasIndex(new[] { "Userid" }, "USER_ACHIEVEMENTS2_FK");
-                        j.HasIndex(new[] { "Achievementsid" }, "USER_ACHIEVEMENTS_FK");
-                        j.IndexerProperty<int>("Achievementsid").HasColumnName("ACHIEVEMENTSID");
-                        j.IndexerProperty<string>("Userid").HasColumnName("USERID");
-                    });
         });
         modelBuilder.Entity<Cpu>(entity =>
         {
@@ -146,6 +127,16 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
             entity.HasIndex(e => e.Userid).HasDatabaseName("USER_GAMES2_FK");
             entity.HasIndex(e => e.Gameid).HasDatabaseName("USER_GAMES_FK");
             entity.Property(e => e.Gameid).HasColumnName("GAMESID");
+            entity.Property(e => e.Userid).HasColumnName("USERID");
+        });
+
+        modelBuilder.Entity<UsersAchievements>(entity =>
+        {
+            entity.HasKey(e => new { e.Achievementid, e.Userid }).HasName("PK_USERS_ACHIEVEMENTS");
+            entity.ToTable("USER_ACHIEVEMENTS");
+            entity.HasIndex(e => e.Userid).HasDatabaseName("USER_ACHIEVEMENTS2_FK");
+            entity.HasIndex(e => e.Achievementid).HasDatabaseName("USER_ACHIEVEMENTS_FK");
+            entity.Property(e => e.Achievementid).HasColumnName("ACHIEVEMENTSID");
             entity.Property(e => e.Userid).HasColumnName("USERID");
         });
 

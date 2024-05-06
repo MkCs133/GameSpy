@@ -25,12 +25,12 @@
       "PackagePath": "staticwebassets\\assets\\friend.png"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\Official_cover_art_for_Bioshock_Infinite.jpg",
-      "PackagePath": "staticwebassets\\assets\\games\\Official_cover_art_for_Bioshock_Infinite.jpg"
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\bioshock_infinite.png",
+      "PackagePath": "staticwebassets\\assets\\games\\bioshock_infinite.png"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\The_Legend_of_Zelda_Breath_of_the_Wild.png",
-      "PackagePath": "staticwebassets\\assets\\games\\The_Legend_of_Zelda_Breath_of_the_Wild.png"
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\breath_of_the_wild.png",
+      "PackagePath": "staticwebassets\\assets\\games\\breath_of_the_wild.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\civilization_vi.png",
@@ -59,6 +59,10 @@
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\gears_5.png",
       "PackagePath": "staticwebassets\\assets\\games\\gears_5.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\gta_v.png",
+      "PackagePath": "staticwebassets\\assets\\games\\gta_v.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\half_life_2.png",
@@ -91,6 +95,10 @@
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\portal_2.png",
       "PackagePath": "staticwebassets\\assets\\games\\portal_2.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\red_dead_redemption_2.png",
+      "PackagePath": "staticwebassets\\assets\\games\\red_dead_redemption_2.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\resident_evil_2.png",
@@ -137,8 +145,12 @@
       "PackagePath": "staticwebassets\\assets\\games\\witcher_3.png"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\gta_v.png",
-      "PackagePath": "staticwebassets\\assets\\gta_v.png"
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\world_of_tanks.png",
+      "PackagePath": "staticwebassets\\assets\\games\\world_of_tanks.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\help.png",
+      "PackagePath": "staticwebassets\\assets\\help.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\marketing.jpg",
@@ -153,12 +165,12 @@
       "PackagePath": "staticwebassets\\assets\\plus.png"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profileLogo.png",
-      "PackagePath": "staticwebassets\\assets\\profileLogo.png"
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\privacy.png",
+      "PackagePath": "staticwebassets\\assets\\privacy.png"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\red_dead_redemption_2.png",
-      "PackagePath": "staticwebassets\\assets\\red_dead_redemption_2.png"
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profileLogo.png",
+      "PackagePath": "staticwebassets\\assets\\profileLogo.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\settings.png",
@@ -167,10 +179,6 @@
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\user.png",
       "PackagePath": "staticwebassets\\assets\\user.png"
-    },
-    {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\world_of_tanks.png",
-      "PackagePath": "staticwebassets\\assets\\world_of_tanks.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\Index.css",

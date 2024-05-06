@@ -43,6 +43,38 @@ namespace GameSpy.Service.UserS
             }
         }
 
+        public async Task<List<Achievement>> GetAchievements(string id)
+        {
+            List<Achievement> allAchievements = await _context.Achievements.ToListAsync();
+
+            var userAchievementList = await _context.UsersAchievements.ToListAsync();
+            var achievementUserListById = new List<UsersAchievements>();
+
+            List<Achievement> usersAchievements = new List<Achievement>();
+
+            foreach (UsersAchievements achievement in userAchievementList)
+            {
+                if (achievement.Userid == id)
+                {
+                    achievementUserListById.Add(achievement);
+                }
+            }
+
+            foreach (Achievement achievement in allAchievements)
+            {
+                foreach (UsersAchievements usersId in achievementUserListById)
+                {
+                    if (achievement.Achievementsid == usersId.Achievementid)
+                    {
+                        usersAchievements.Add(achievement);
+                    }
+                }
+            }
+
+            return usersAchievements;
+
+        }
+
         public async Task<List<AppUser>> GetAllUsers()
         {
 

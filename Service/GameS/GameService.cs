@@ -69,20 +69,20 @@ namespace GameSpy.Service.GameS
         public async Task<List<Game>> GetUsersGames(string userId)
         {
             List<Game> userGames = new List<Game>();
-            List<UsersGames> entryList = new List<UsersGames>();
+            List<UsersGames> userGameList = new List<UsersGames>();
 
             var allEntrys = await _context.UsersGames.ToListAsync();
 
             foreach (var entry in allEntrys)
             {
                 if(entry.Userid == userId)
-                    entryList.Add(entry);
+                    userGameList.Add(entry);
             }
 
             var games = GetAllGames();
             foreach (Game game in await games)
             {
-                foreach (var entry in entryList)
+                foreach (var entry in userGameList)
                 {
                     if (game.Gameid == entry.Gameid)
                         userGames.Add(game);
