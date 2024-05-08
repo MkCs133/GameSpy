@@ -16,7 +16,7 @@
                     </div>
                     <h2 class="mx-0 align-text-center">@Model.UserName</h2>
                 </div>
-                    <a asp-controller="User" asp-action="AddBalance" class="text-decoration-none h-10 flex-grow-1 my-border border-bottom-0">Balance</a>
+                    <a asp-controller="User" asp-action="AddBalance" asp-route-id="@Model.Id" class="text-decoration-none h-10 flex-grow-1 my-border border-bottom-0">Balance</a>
                     <a href="#" class="text-decoration-none h-10 flex-grow-1 my-border border-bottom-0">Username</a>
                     <a href="#" class="text-decoration-none h-10 flex-grow-1 my-border border-bottom-0">Email</a>
                     <a href="#" class="text-decoration-none h-10 flex-grow-1 my-border border-bottom-0">Password</a>

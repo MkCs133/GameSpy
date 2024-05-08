@@ -1,4 +1,5 @@
-﻿using GameSpy.Models;
+﻿using GameSpy.DTOs;
+using GameSpy.Models;
 
 namespace GameSpy.Service.GameS
 {
@@ -6,9 +7,11 @@ namespace GameSpy.Service.GameS
     {
         Task<Game> GetGameById(int id);
         Task<List<Game>> GetAllGames();
-        Task<List<Game>> GetUsersGames(string userId);
+        Task<List<GameDTO>> GetUsersGames(string userId);
         Task UpdateGame(int id, Game newGame);
         Task DeleteGame(int id);
         Task AddGame(Game game);
+
+        Task UpdateRecentTime(int id);
     }
 }

@@ -7,6 +7,9 @@ using System.Security.Claims;
 using System.Net;
 using AutoMapper;
 using GameSpy.DTOs;
+using Microsoft.AspNetCore.OutputCaching;
+using Azure;
+using Microsoft.AspNetCore.ResponseCaching;
 
 namespace GameSpy.Controllers
 {
@@ -17,6 +20,7 @@ namespace GameSpy.Controllers
         private readonly IMapper _mapper;
         private readonly UserManager<AppUser> _userManager;
 
+
         public UserController(IUserService userService, UserManager<AppUser> userManager, IGameService gameService, IMapper mapper)
         {
             this._mapper = mapper;
@@ -25,16 +29,31 @@ namespace GameSpy.Controllers
             this._gameService = gameService;
 
         }
+
         [HttpGet]
+        [ResponseCache(NoStore = true, Duration = 0, Location = ResponseCacheLocation.None)]
         public async Task<IActionResult> UserPage()
         {
+            
             var user = await _userManager.GetUserAsync(User);
-            user.Games = await _gameService.GetUsersGames(user.Id);
+ 
             user.Achievements = await _userService.GetAchievements(user.Id);
 
             var modelUser = _mapper.Map<UserDTO>(user);
+            modelUser.Games = await _gameService.GetUsersGames(user.Id);
             modelUser.NumberOfGames = user.Games.Count();
             modelUser.NumberOfAchievements = user.Achievements.Count();
+
+            
+
+            foreach (GameDTO game in modelUser.Games)
+            {
+                modelUser.RecentGames.Add(game);
+            }
+
+            modelUser.RecentGames.Sort((x,y) => x.RecentTime.CompareTo(y.RecentTime));
+            modelUser.RecentGames.Reverse();
+
             return View(modelUser);
         }
 
@@ -48,14 +67,19 @@ namespace GameSpy.Controllers
         [HttpGet]
         public async Task<IActionResult> AddBalance(string id)
         {
-            return View();
+            var user = await _userService.GetUserById(id);
+            return View(user);
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateBalance(string id, AppUser updatedUser)
+        public async Task<IActionResult> UpdateBalance(string id, AppUser viewModel)
         {
-            await _userService.UpdateUser(id, updatedUser);
-            return View("UserPage");
+            var user = await _userService.GetUserById(id);
+            user.Balance += viewModel.Balance;
+
+            await _userService.UpdateUser(id, user);
+            return RedirectToAction("UserPage");
         }
+
     }
 }

@@ -17,4 +17,5 @@ public partial class AppUser : IdentityUser
     public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 
     public virtual ICollection<Game> Games { get; set; } = new List<Game>();
+
 }

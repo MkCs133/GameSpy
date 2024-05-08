@@ -101,7 +101,7 @@ namespace GameSpy.Service.UserS
         public async Task UpdateUser(string id, AppUser updatedUser)
         {
             var user =  await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
-
+            
 
             try 
             {

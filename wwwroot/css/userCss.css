@@ -141,13 +141,14 @@ i:hover {
 /* Track */
 ::-webkit-scrollbar-track {
     border: 1px solid #00b8ff;
-    background: ;
+    background: #212529;
+    margin-top: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     border: 1px solid #00b8ff;
-    background: black;
+    background: #212529;
 }
 
     /* Handle on hover */

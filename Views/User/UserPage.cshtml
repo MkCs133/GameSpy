@@ -1,5 +1,6 @@
 ﻿@model GameSpy.DTOs.UserDTO
 @using GameSpy.Areas.Identity.Data
+@using GameSpy.DTOs
 @using Microsoft.AspNetCore.Identity;
 
 @inject MySIgnInManager SignInManager
@@ -7,6 +8,16 @@
 
 <head>
     <link rel="stylesheet" href="~/css/userCss.css" />
+
+    <script>
+        window.onpageshow = function (event) {
+            console.log("onpageshow event fired " + event.persisted);
+            if (event.persisted == true) {
+                console.log("onpageshow event fired second time");
+                window.location.reload();
+            }
+        };
+    </script>
 </head>
 
 <body>
@@ -42,16 +53,16 @@
                 <h2 class="ff-utnr">Recently Played</h2>
             </div>
             <div class="h-26 d-flex w-100 overflow-auto">
-                @for (int i = 0; i < 3; i++)
+                @for (int i=0; i< 6; i++)
                 {
-                    <figure class="mx-3">
-                        <img src="https://picsum.photos/id/287/250/300" alt="Mountains">
-                        <figcaption>The Day</figcaption>
-                    </figure>
-                    <figure style="--c:#fff5">
-                        <img src="https://picsum.photos/id/475/250/300" alt="Mountains">
-                        <figcaption>The Night</figcaption>
-                    </figure>
+                    <a asp-controller="Game" asp-action="SelectedGame" asp-route-id="@Model.RecentGames[i].Gameid">
+                        <div class="d-inline-block">
+                            <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
+                                <img class="custom-image-size" src="~/assets/games/@Model.RecentGames[i].Image" alt="@Model.RecentGames[i].Image">
+                                <figcaption>@Model.RecentGames[i].Name</figcaption>
+                            </figure>
+                        </div>
+                    </a>
                 }
             </div>
             <div class="h-8 pt-1">
@@ -60,21 +71,25 @@
                 </div>
             </div>
             <div class="h-54 d-inline-block overflow-auto">
-                @foreach (Game game in Model.Games)
+                @foreach (GameDTO game in Model.Games)
                 {
-                    <div class="d-inline-block">
-                        <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
-                            <img class="custom-image-size" src="~/assets/games/@game.Image" alt="@game.Image">
-                            <figcaption>@game.Name</figcaption>
-                        </figure>
-                    </div>
+                    <a asp-controller="Game" asp-action="SelectedGame" asp-route-id="@game.Gameid">
+                        <div class="d-inline-block">
+                            <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
+                                <img class="custom-image-size" src="~/assets/games/@game.Image" alt="@game.Image">
+                                <figcaption>@game.RecentTime</figcaption>
+                            </figure>
+                        </div>
+                    </a>
                 }
             </div>
         </div>
         <div class="col-2 my-border">
             <div class="h-9 d-flex bottom-border px-2">
                 <div class="flex-grow-1 ff-utnr h2 mt-3">
-                    <i class="bi bi-plus-square"></i>
+                    <a asp-controller="User" asp-action="AddBalance" asp-route-id="@Model.Id">
+                        <i class="bi bi-plus-square"></i>
+                    </a>
                 </div>
                 <div class="flex-grow-1 align-text-right ff-utnr h2 mt-3">
                     @Model.Balance $

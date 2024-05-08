@@ -15,10 +15,12 @@ namespace GameSpy.DTOs
 
         public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 
-        public virtual ICollection<Game> Games { get; set; } = new List<Game>();
+        public virtual ICollection<GameDTO> Games { get; set; } = new List<GameDTO>();
 
         public int NumberOfGames { get; set; }
 
         public int NumberOfAchievements { get; set; }
+
+        public List<GameDTO> RecentGames { get; set; } = new List<GameDTO>();
     }
 }

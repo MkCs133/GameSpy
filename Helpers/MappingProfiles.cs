@@ -10,6 +10,7 @@ namespace GameSpy.Helpers
         public MappingProfiles()
         {
             CreateMap<AppUser, UserDTO>();
+            CreateMap<Game, GameDTO>();
             CreateMap<Game, Game>();
             CreateMap<Pc, Pc>();
         }

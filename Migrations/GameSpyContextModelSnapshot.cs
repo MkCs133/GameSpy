@@ -22,6 +22,21 @@ namespace GameSpy.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("AchievementAppUser", b =>
+                {
+                    b.Property<int>("Achievementsid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UsersId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Achievementsid", "UsersId");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("AchievementAppUser");
+                });
+
             modelBuilder.Entity("AppUserGame", b =>
                 {
                     b.Property<int>("GamesGameid")
@@ -225,13 +240,14 @@ namespace GameSpy.Migrations
                         .HasMaxLength(60)
                         .IsUnicode(false)
                         .HasColumnType("varchar(60)")
-                        .HasColumnName("MANUFACTURER");
+                        .HasColumnName("IMAGE");
 
                     b.Property<string>("Manufacturer")
                         .IsRequired()
                         .HasMaxLength(60)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(60)");
+                        .HasColumnType("varchar(60)")
+                        .HasColumnName("MANUFACTURER");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -242,6 +258,9 @@ namespace GameSpy.Migrations
 
                     b.Property<decimal>("Rating")
                         .HasColumnType("decimal(18, 2)");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Gameid");
 
@@ -472,6 +491,28 @@ namespace GameSpy.Migrations
                     b.ToTable("STORAGE", (string)null);
                 });
 
+            modelBuilder.Entity("GameSpy.Models.UsersAchievements", b =>
+                {
+                    b.Property<int>("Achievementid")
+                        .HasColumnType("int")
+                        .HasColumnName("ACHIEVEMENTSID");
+
+                    b.Property<string>("Userid")
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("USERID");
+
+                    b.HasKey("Achievementid", "Userid")
+                        .HasName("PK_USERS_ACHIEVEMENTS");
+
+                    b.HasIndex("Achievementid")
+                        .HasDatabaseName("USER_ACHIEVEMENTS_FK");
+
+                    b.HasIndex("Userid")
+                        .HasDatabaseName("USER_ACHIEVEMENTS2_FK");
+
+                    b.ToTable("USER_ACHIEVEMENTS", (string)null);
+                });
+
             modelBuilder.Entity("GameSpy.Models.UsersGames", b =>
                 {
                     b.Property<int>("Gameid")
@@ -631,23 +672,19 @@ namespace GameSpy.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("UserAchievement", b =>
+            modelBuilder.Entity("AchievementAppUser", b =>
                 {
-                    b.Property<int>("Achievementsid")
-                        .HasColumnType("int")
-                        .HasColumnName("ACHIEVEMENTSID");
+                    b.HasOne("GameSpy.Models.Achievement", null)
+                        .WithMany()
+                        .HasForeignKey("Achievementsid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<string>("Userid")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("USERID");
-
-                    b.HasKey("Achievementsid", "Userid");
-
-                    b.HasIndex(new[] { "Userid" }, "USER_ACHIEVEMENTS2_FK");
-
-                    b.HasIndex(new[] { "Achievementsid" }, "USER_ACHIEVEMENTS_FK");
-
-                    b.ToTable("USER_ACHIEVEMENTS", (string)null);
+                    b.HasOne("GameSpy.Models.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("AppUserGame", b =>
@@ -841,21 +878,6 @@ namespace GameSpy.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("UserAchievement", b =>
-                {
-                    b.HasOne("GameSpy.Models.Achievement", null)
-                        .WithMany()
-                        .HasForeignKey("Achievementsid")
-                        .IsRequired()
-                        .HasConstraintName("FK_USER_ACH_USER_ACHI_ACHIEVEM");
-
-                    b.HasOne("GameSpy.Models.AppUser", null)
-                        .WithMany()
-                        .HasForeignKey("Userid")
-                        .IsRequired()
-                        .HasConstraintName("FK_USER_ACH_USER_ACHI_USER");
                 });
 
             modelBuilder.Entity("GameSpy.Models.AppUser", b =>

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GameSpy.DTOs;
 using GameSpy.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -66,9 +67,9 @@ namespace GameSpy.Service.GameS
             }
         }
 
-        public async Task<List<Game>> GetUsersGames(string userId)
+        public async Task<List<GameDTO>> GetUsersGames(string userId)
         {
-            List<Game> userGames = new List<Game>();
+            List<GameDTO> userGames = new List<GameDTO>();
             List<UsersGames> userGameList = new List<UsersGames>();
 
             var allEntrys = await _context.UsersGames.ToListAsync();
@@ -80,12 +81,27 @@ namespace GameSpy.Service.GameS
             }
 
             var games = GetAllGames();
+            var mappedGames = new List<GameDTO>();
+
+
             foreach (Game game in await games)
             {
                 foreach (var entry in userGameList)
                 {
                     if (game.Gameid == entry.Gameid)
-                        userGames.Add(game);
+                    {
+                        try
+                        {
+                            var mappedGame = new GameDTO();
+                            mappedGame = _mapper.Map<Game, GameDTO>(game);
+                            mappedGame.RecentTime = entry.RecentTime;
+                            userGames.Add(mappedGame);
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception(ex.Message);
+                        }
+                    }
                 }
             }
             return userGames;
@@ -109,6 +125,25 @@ namespace GameSpy.Service.GameS
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public async Task UpdateRecentTime(int id)
+        {
+            var game = await _context.UsersGames.FirstOrDefaultAsync(g => g.Gameid == id);
+
+            try
+            {
+                if (game == null)
+                    throw new Exception("This Game is not registered in Database!!!");
+
+                game.RecentTime = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
     }
 }

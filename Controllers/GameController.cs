@@ -20,5 +20,15 @@ namespace GameSpy.Controllers
             Console.WriteLine(games);
             return games;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> SelectedGame(int id)
+        {
+            var game = await _gameService.GetGameById(id);
+            await _gameService.UpdateRecentTime(id);
+
+
+            return View(game);
+        }
     }
 }

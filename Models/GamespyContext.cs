@@ -128,6 +128,7 @@ public partial class GameSpyContext : IdentityDbContext<AppUser>
             entity.HasIndex(e => e.Gameid).HasDatabaseName("USER_GAMES_FK");
             entity.Property(e => e.Gameid).HasColumnName("GAMESID");
             entity.Property(e => e.Userid).HasColumnName("USERID");
+            entity.Property(e => e.RecentTime).HasColumnName("RECENTTIME");
         });
 
         modelBuilder.Entity<UsersAchievements>(entity =>
