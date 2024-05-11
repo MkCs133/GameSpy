@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\goran\\source\\repos\\GameSpy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|c:\\users\\goran\\source\\repos\\gamespy\\wwwroot\\css\\usercss.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:wwwroot\\css\\usercss.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|c:\\users\\goran\\source\\repos\\gamespy\\areas\\identity\\pages\\account\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:areas\\identity\\pages\\account\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|c:\\users\\goran\\source\\repos\\gamespy\\areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|c:\\users\\goran\\source\\repos\\gamespy\\service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\views\\user\\updateusername.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:views\\user\\updateusername.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\views\\user\\userpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:views\\user\\userpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\service\\games\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:service\\games\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\views\\user\\usersettings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:views\\user\\usersettings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|C:\\Users\\goran\\source\\repos\\GameSpy\\views\\user\\addbalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CF0A4D5-A19D-4B2F-8FC5-2BE0361191A1}|GameSpy.csproj|solutionrelative:views\\user\\addbalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +50,132 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "userCss.css",
-              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\userCss.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\userCss.css",
-              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\userCss.css",
-              "RelativeToolTip": "wwwroot\\css\\userCss.css",
-              "ViewState": "AQIAAIEAAAAAaGZmZmYkwJAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-08T19:35:02.208Z",
+              "DocumentIndex": 1,
+              "Title": "ResetPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAQwHMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T17:14:19.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-11T17:13:57.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAkAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T16:16:02.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAkAAACAZmZmZmYkwBAAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T16:08:29.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Service\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Service\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Service\\EmailSender.cs",
+              "RelativeToolTip": "Service\\EmailSender.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T15:57:00.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateUsername.cshtml",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\UpdateUsername.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\UpdateUsername.cshtml",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\UpdateUsername.cshtml",
+              "RelativeToolTip": "Views\\User\\UpdateUsername.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-11T13:51:14.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserSettings.cshtml",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\UserSettings.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\UserSettings.cshtml",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\UserSettings.cshtml",
+              "RelativeToolTip": "Views\\User\\UserSettings.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-09T18:00:14.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserPage.cshtml",
               "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\UserPage.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\UserPage.cshtml",
               "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\UserPage.cshtml",
               "RelativeToolTip": "Views\\User\\UserPage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAABAPToAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-08T18:50:53.653Z"
+              "WhenOpened": "2024-05-09T17:59:53.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IGameService.cs",
-              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Service\\GameS\\IGameService.cs",
-              "RelativeDocumentMoniker": "Service\\GameS\\IGameService.cs",
-              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Service\\GameS\\IGameService.cs",
-              "RelativeToolTip": "Service\\GameS\\IGameService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T17:59:58.982Z"
+              "DocumentIndex": 9,
+              "Title": "AddBalance.cshtml",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\AddBalance.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\AddBalance.cshtml",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Views\\User\\AddBalance.cshtml",
+              "RelativeToolTip": "Views\\User\\AddBalance.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-09T17:22:48.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Controllers\\GameController.cs",
-              "RelativeToolTip": "Controllers\\GameController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\goran\\source\\repos\\GameSpy\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\goran\\source\\repos\\GameSpy\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAGEAAABAZmZmZmYqwGYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T17:55:22.288Z"
+              "WhenOpened": "2024-05-09T17:12:27.796Z"
             }
           ]
         }

@@ -141,6 +141,10 @@
       "PackagePath": "staticwebassets\\assets\\games\\uncharted_4.png"
     },
     {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\valorant.png",
+      "PackagePath": "staticwebassets\\assets\\games\\valorant.png"
+    },
+    {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\witcher_3.png",
       "PackagePath": "staticwebassets\\assets\\games\\witcher_3.png"
     },

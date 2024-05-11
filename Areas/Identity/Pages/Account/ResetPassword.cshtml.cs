@@ -69,7 +69,7 @@ namespace GameSpy.Areas.Identity.Pages.Account
             /// </summary>
             [Required]
             public string Code { get; set; }
-
+           
         }
 
         public IActionResult OnGet(string code = null)

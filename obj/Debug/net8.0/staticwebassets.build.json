@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vUVEfuDBnRUfsZHAw7Sfgtf5JAyjbrB0VYpnzelpXlY=",
+  "Hash": "v1riyq83ntGQIkdGVtpKTh845SPqGvF17I8V9zNSB8c=",
   "Source": "GameSpy",
   "BasePath": "_content/GameSpy",
   "Mode": "Default",
@@ -1839,6 +1839,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\games\\uncharted_4.png"
+    },
+    {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\valorant.png",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/games/valorant.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\games\\valorant.png"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\witcher_3.png",

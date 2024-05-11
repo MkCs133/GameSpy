@@ -1,4 +1,5 @@
-using GameSpy.Models;
+﻿using GameSpy.Models;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

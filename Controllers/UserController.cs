@@ -41,7 +41,7 @@ namespace GameSpy.Controllers
 
             var modelUser = _mapper.Map<UserDTO>(user);
             modelUser.Games = await _gameService.GetUsersGames(user.Id);
-            modelUser.NumberOfGames = user.Games.Count();
+            modelUser.NumberOfGames = modelUser.Games.Count();
             modelUser.NumberOfAchievements = user.Achievements.Count();
 
             
@@ -81,5 +81,55 @@ namespace GameSpy.Controllers
             return RedirectToAction("UserPage");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> UpdateUsername(string id)
+        {
+            var user = await _userService.GetUserById(id);
+            return View(user);
+        }
+       
+        [HttpPost]
+        public async Task<IActionResult> UpdateUsername(string id, AppUser viewModel)
+        {
+            var user = await _userService.GetUserById(id);
+            user.UserName = viewModel.UserName;
+            await _userService.UpdateUser(id, user);
+
+            return RedirectToAction("UserPage");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdatePassword(string id)
+        {
+            var user = await _userService.GetUserById(id);
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdatePassword(string id, AppUser viewModel)
+        {
+            var user = await _userService.GetUserById(id);
+            user.PasswordHash = viewModel.PasswordHash;
+            await _userService.UpdateUser(id, user);
+
+            return RedirectToAction("UserPage");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateEmail(string id)
+        {
+            var user = await _userService.GetUserById(id);
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateEmail(string id, AppUser viewModel)
+        {
+            var user = await _userService.GetUserById(id);
+            user.Email = viewModel.Email;
+            await _userService.UpdateUser(id, user);
+
+            return RedirectToAction("UserPage");
+        }
     }
 }
