@@ -66,8 +66,8 @@ li {
     height: 20% !important
 }
 
-.h-26 {
-    height: 26% !important
+.h-28 {
+    height: 28% !important
 }
 
 .h-35 {
@@ -196,9 +196,9 @@ figure {
         font-family: 'Times New Roman';
         font-size: 1.5rem;
         font-weight: bold;
-        color: #ff0000;
+        color: black;
         padding: .75rem;
-        background: #ffffff;
+        background: #00b8ff;
         clip-path: inset(var(--_i,100%) 0 0 0);
         margin: -1px;
     }

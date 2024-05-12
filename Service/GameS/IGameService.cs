@@ -8,6 +8,8 @@ namespace GameSpy.Service.GameS
         Task<Game> GetGameById(int id);
         Task<List<Game>> GetAllGames();
         Task<List<GameDTO>> GetUsersGames(string userId);
+
+        Task<ICollection<Achievement>> GetUsersIngameAchievement(string userId, int id);
         Task UpdateGame(int id, Game newGame);
         Task DeleteGame(int id);
         Task AddGame(Game game);

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v1riyq83ntGQIkdGVtpKTh845SPqGvF17I8V9zNSB8c=",
+  "Hash": "V1T+uTxSP397/VWa7ulmocS0KEgFe/sHk3At9Lnm86E=",
   "Source": "GameSpy",
   "BasePath": "_content/GameSpy",
   "Mode": "Default",
@@ -2067,6 +2067,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Index.css"
+    },
+    {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\SelectedGameStyle.css",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "css/SelectedGameStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\SelectedGameStyle.css"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\site.css",

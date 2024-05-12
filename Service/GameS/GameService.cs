@@ -107,6 +107,37 @@ namespace GameSpy.Service.GameS
             return userGames;
         }
 
+        public async Task<ICollection<Achievement>> GetUsersIngameAchievement(string userId, int id)
+        {
+            List<UsersAchievements> usersAchievementsDB = await _context.UsersAchievements.ToListAsync();
+            List<UsersAchievements> usersAchievements = new List<UsersAchievements>();
+
+            List<Achievement> achievementsDB = await _context.Achievements.ToListAsync();
+            ICollection<Achievement> usersIngameAchievements = new List<Achievement>();
+
+            
+            foreach (UsersAchievements user in usersAchievementsDB)
+            {
+                if (user.Userid == userId)
+                {
+                    usersAchievements.Add(user);
+                }
+            }
+
+            foreach (UsersAchievements achievements in usersAchievements)
+            {
+                foreach (Achievement achhievementDB in achievementsDB)
+                {
+                    if (achievements.Achievementid == achhievementDB.Achievementsid && achhievementDB.Gameid == id)
+                    {
+                        usersIngameAchievements.Add(achhievementDB);
+                    }
+                }
+            }
+
+            return usersIngameAchievements;
+        }
+
         public async Task UpdateGame(int id, Game newGame)
         {
             var game = await _context.Games.FirstOrDefaultAsync(g => g.Gameid == id);

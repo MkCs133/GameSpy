@@ -11,16 +11,14 @@
 
     <script>
         window.onpageshow = function (event) {
-            console.log("onpageshow event fired " + event.persisted);
             if (event.persisted == true) {
-                console.log("onpageshow event fired second time");
                 window.location.reload();
             }
         };
     </script>
 </head>
 
-<body>
+<body class="bg-dark">
     <div class="container-fluid d-flex vh-100 bg-dark p-0">
         <div class="col-2 my-border">
             <div class="w-100 p-3 d-flex">
@@ -28,8 +26,8 @@
                     <h2 class=" ff-utnr">GameSpy</h2>
                 </div>
                 <div class="flex-grow-1 align-text-right">
-                    <a asp-area="Identity" asp-page="/Account/Logout">
-                        <img class="logout" href="#" src="~/assets/exit.png"></img>
+                    <a asp-area="Identity" asp-page="/Account/Login">
+                        <img class="logout" src="~/assets/exit.png"></img>
                     </a>
                 </div>
             </div>
@@ -49,17 +47,17 @@
             </div>
         </div>
         <div class="col-8 my-border px-5">
-            <div class="w-100 m-3">
+            <div class="w-100 mx-3 mt-3">
                 <h2 class="ff-utnr">Recently Played</h2>
             </div>
-            <div class="h-26 d-flex w-100 overflow-auto">
+            <div class="h-28 d-flex w-100 overflow-auto">
                 @for (int i=0; i< 6; i++)
                 {
                     if (Model.RecentGames.Count != 0)
                     {
                         <a asp-controller="Game" asp-action="SelectedGame" asp-route-id="@Model.RecentGames[i].Gameid">
                             <div class="d-inline-block">
-                                <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
+                                <figure class="mx-3 mt-2 game-holder" style="--c:#fff5">
                                     <img class="custom-image-size" src="~/assets/games/@Model.RecentGames[i].Image" alt="@Model.RecentGames[i].Image">
                                     <figcaption>@Model.RecentGames[i].Name</figcaption>
                                 </figure>
@@ -113,7 +111,7 @@
                     </a>
                 </div>
                 <div class="h-25 my-1 d-flex justify-content-end w-100">
-                    <a class="d-flex>
+                    <a asp-action="UserPrivacy" asp-controller="User" class="d-flex">
                         <p class="ff-utnr">Privacy</p>
                         <img href="#" src="~/assets/privacy.png" class="icons mx-1"></img>
                     </a>

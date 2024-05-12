@@ -1,0 +1,85 @@
+﻿.selected-game-grid {
+    display: grid;
+    grid-template: "a b"
+                   "c d"
+                   "e f";
+    grid-template-columns: 13% 1fr;
+    grid-template-rows: 190px 60px 450px;
+}
+
+.description-label {
+    grid-area: c;
+    font-size: 26pt;
+    text-align:center;
+}
+
+.game-image {
+    grid-area: a;
+    border: 1px solid #00b8ff;
+}
+
+.game-informations {
+    grid-area: b;
+    border: 1px solid #00b8ff;
+}
+
+.game-description {
+    grid-area: c;
+    border: 1px solid #00b8ff;
+}
+
+.achievement-label {
+    grid-area: d;
+    border: 1px solid #00b8ff;
+    font-size: 26pt;
+    padding-left: 15px;
+}
+
+.achievements {
+    grid-area: f;
+    border: 1px solid #00b8ff;
+}
+
+.selected-game-image {
+    width: 170px;
+    height: 173px;
+}
+
+.ff-utnr {
+    font-family: 'Times New Roman';
+    color: #00b8ff;
+}
+
+.my-border {
+    border: 1px solid #00b8ff;
+}
+
+.ingame-achievements {
+    height: 100px;
+    width: 95%;
+    background-color: #212529;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border: 1px solid #00b8ff;
+    background: #212529;
+    margin-top: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border: 1px solid #00b8ff;
+    background: #212529;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00b8ff;
+    }
