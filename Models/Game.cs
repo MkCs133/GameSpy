@@ -19,7 +19,5 @@ public partial class Game
 
     public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 
-    public virtual ICollection<Pc> Pcs { get; set; } = new List<Pc>();
-
     public virtual ICollection<AppUser> Users { get; set; } = new List<AppUser>();
 }

@@ -21,10 +21,6 @@
       "PackagePath": "staticwebassets\\assets\\exit.png"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\friend.png",
-      "PackagePath": "staticwebassets\\assets\\friend.png"
-    },
-    {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\games\\bioshock_infinite.png",
       "PackagePath": "staticwebassets\\assets\\games\\bioshock_infinite.png"
     },
@@ -173,8 +169,20 @@
       "PackagePath": "staticwebassets\\assets\\privacy.png"
     },
     {
-      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profileLogo.png",
-      "PackagePath": "staticwebassets\\assets\\profileLogo.png"
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\achievement.png",
+      "PackagePath": "staticwebassets\\assets\\profilePictures\\achievement.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\default.png",
+      "PackagePath": "staticwebassets\\assets\\profilePictures\\default.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\friend.png",
+      "PackagePath": "staticwebassets\\assets\\profilePictures\\friend.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\profilePictrue.png",
+      "PackagePath": "staticwebassets\\assets\\profilePictures\\profilePictrue.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\settings.png",
@@ -195,6 +203,10 @@
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\UserStyle.css",
       "PackagePath": "staticwebassets\\css\\UserStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\help.css",
+      "PackagePath": "staticwebassets\\css\\help.css"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\site.css",

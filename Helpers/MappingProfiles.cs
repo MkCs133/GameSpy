@@ -12,7 +12,6 @@ namespace GameSpy.Helpers
             CreateMap<AppUser, UserDTO>();
             CreateMap<Game, GameDTO>();
             CreateMap<Game, Game>();
-            CreateMap<Pc, Pc>();
         }
     }
 }

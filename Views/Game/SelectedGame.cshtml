@@ -4,35 +4,39 @@
     <link rel="stylesheet" href="~/css/SelectedGameStyle.css"></link>
 </head>
 
-<body class="m-0 p-0">
-    <div class="container-fluid vh-100 m-0 p-0 bg-dark my-border">
-        <div class="selected-game-grid">
-            <div class="game-image h-20">
-                <div class="selected-game-image p-2">
-                    <img class="selected-game-image rounded" src="~/assets/games/@Model.Image"></img>
+<body>
+    <div class="container-fluid vh-100 selected-grid selected-bg">
+        <div class="container vh-100 m-0 p-0 bg-dark selected-info my-border">
+            <div class="selected-game-grid">
+                <div class="game-image h-20">
+                    <div class="selected-game-image p-2">
+                        <img class="selected-game-image rounded" src="~/assets/games/@Model.Image"></img>
+                    </div>
+                </div>
+                <div class="game-informations h-20 px-3 ff-utnr">
+                    <h1>@Model.Name</h1>
+                    <h3 class="my-4">Manufacturer: @Model.Manufacturer</h3>
+                    <h3>Rating: @Model.Rating ★</h3>
+                </div>
+                <div class="game-description ff-utnr">
+                    <p class="description-label">Description</p>
+                    <p>@Model.Description</p>
+                </div>
+                <div class="achievement-label h-10 ff-utnr my-border align-text-bottom">
+                    Achievements
+                </div>
+                <div class="achievements overflow-auto p-2">
+                    @foreach (Achievement achievement in Model.Achievements)
+                    {
+                        <div class="my-border m-2 mx-auto ingame-achievements ff-utnr rounded px-3">
+                            <h2>@achievement.Name</h2>
+                            <p>@achievement.Description</p>
+                        </div>
+                    }
                 </div>
             </div>
-            <div class="game-informations h-20 px-3 ff-utnr">
-                <h1>@Model.Name</h1>
-                <h3 class="my-4">Manufacturer: @Model.Manufacturer</h3>
-                <p>Rating: @Model.Rating ★</p>
-            </div>
-            <div class="game-description ff-utnr">
-                <p class="description-label">Description</p>
-                <p>@Model.Description</p>
-            </div>
-            <div class="achievement-label h-10 ff-utnr my-border align-text-bottom">
-                Achievements 
-            </div>
-            <div class="achievements overflow-auto p-2">
-                @foreach (Achievement achievement in Model.Achievements)
-                {
-                    <div class="my-border m-2 mx-auto ingame-achievements ff-utnr rounded px-3">
-                        <h2>@achievement.Name</h2>
-                        <p>@achievement.Description</p>
-                    </div>
-                }
-            </div>
         </div>
+
     </div>
+
 </body>

@@ -11,7 +11,7 @@ namespace GameSpy.DTOs
 
         public decimal Balance { get; set; }
 
-        public virtual ICollection<Pc> Pcs { get; set; } = new List<Pc>();
+        public string ProfilePicture { get; set; }
 
         public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 

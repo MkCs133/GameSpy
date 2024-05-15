@@ -1,18 +1,18 @@
 ﻿@model AppUser
 
-
 <head>
     <link rel="stylesheet" href="~/css/userSettings.css" />
 </head>
 
 <body class="container-fluid">
-    <form >
+    <form method="post" enctype="multipart/form-data" asp-action="ChangeUserImage" asp-route-id="@Model.Id">
         <div class="w-100 vh-100 bg-dark align-content-center ff-utnrr">
             <div class="d-flex flex-column mx-auto align-content-center ff-utnr justify-content-center my-border central-card">
                 <div class="flex-grow-1 h-35 align-content-center">
                     <div class="profile-picture">
-                        <img src="~/assets/friend.png" alt="Loading..."/>
-                        <a href="#" class="change-image">+</a>
+                        <img src="~/assets/profilePictures/@Model.ProfilePicture" alt="Loading..." />
+                        <label for="picture" class="change-image">+</label>
+                        <input type="file" class="d-none" id="picture" name="file" onchange="form.submit()"></input>
                     </div>
                     <h2 class="mx-0 align-text-center">@Model.UserName</h2>
                 </div>
@@ -24,3 +24,8 @@
         </div>
     </form>
 </body>
+<script>
+    AddPicture(){
+        
+    }
+</script>

@@ -3,13 +3,9 @@ using GameSpy.Service.GameS;
 using GameSpy.Service.UserS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using System.Net;
 using AutoMapper;
 using GameSpy.DTOs;
-using Microsoft.AspNetCore.OutputCaching;
-using Azure;
-using Microsoft.AspNetCore.ResponseCaching;
+using Microsoft.AspNetCore.Http;
 
 namespace GameSpy.Controllers
 {
@@ -19,15 +15,16 @@ namespace GameSpy.Controllers
         private readonly IGameService _gameService;
         private readonly IMapper _mapper;
         private readonly UserManager<AppUser> _userManager;
+        private readonly IWebHostEnvironment _webHost;
 
 
-        public UserController(IUserService userService, UserManager<AppUser> userManager, IGameService gameService, IMapper mapper)
+        public UserController(IUserService userService, UserManager<AppUser> userManager, IGameService gameService, IMapper mapper, IWebHostEnvironment webHost)
         {
             this._mapper = mapper;
             this._userService = userService;
             this._userManager = userManager;
             this._gameService = gameService;
-
+            this._webHost = webHost;
         }
 
         [HttpGet]
@@ -130,6 +127,49 @@ namespace GameSpy.Controllers
             await _userService.UpdateUser(id, user);
 
             return RedirectToAction("UserPage");
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> ChangeUserImage(IFormFile file, string id)
+        {
+
+            var user = await _userService.GetUserById(id);
+            string uploadFolder = Path.Combine(_webHost.WebRootPath, "assets/profilePictures");
+
+            if (!Directory.Exists(uploadFolder))
+            {
+                Directory.CreateDirectory(uploadFolder);
+            }
+
+            string fileName = Path.GetFileName(file.FileName);
+            string fileSaveFile = Path.Combine(uploadFolder, fileName);
+
+            user.ProfilePicture = fileName;
+            await _userService.UpdateUser(id, user);
+
+
+            using (FileStream stream = new FileStream(fileSaveFile, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+                return RedirectToAction("UserPage");
+        }
+
+        [HttpGet]
+
+        public IActionResult UserHelp()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
+
+        public IActionResult UserPrivacy()
+        {
+            return View();
         }
     }
 }

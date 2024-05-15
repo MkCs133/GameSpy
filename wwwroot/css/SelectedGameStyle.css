@@ -1,10 +1,26 @@
 ﻿.selected-game-grid {
     display: grid;
+    padding: 0px;
     grid-template: "a b"
                    "c d"
                    "e f";
-    grid-template-columns: 13% 1fr;
-    grid-template-rows: 190px 60px 450px;
+    grid-template-columns: 18% 1fr;
+    grid-template-rows: 220px 60px 422px;
+}
+
+.selected-grid {
+    display: grid;
+    grid-template: region;
+}
+
+.selected-bg {
+    grid-area: region;
+    background-color: #0e1938;
+}
+
+.selected-info {
+    grid-area: region;
+    width: 90%;
 }
 
 .description-label {
@@ -41,8 +57,8 @@
 }
 
 .selected-game-image {
-    width: 170px;
-    height: 173px;
+    width: 190px;
+    height: 203px;
 }
 
 .ff-utnr {

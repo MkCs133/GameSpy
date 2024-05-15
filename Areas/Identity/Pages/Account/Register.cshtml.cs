@@ -103,6 +103,7 @@ namespace GameSpy.Areas.Identity.Pages.Account
             public string LastName { get; set; }
             public string UserName { get; set; }
             public decimal Balance { get; set; }
+            public decimal ProfilePicture { get; set; }
         }
 
 
@@ -118,7 +119,7 @@ namespace GameSpy.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new AppUser { Firstname = Input.FirstName, Lastname = Input.LastName, Balance = 10.00m};
+                var user = new AppUser { Firstname = Input.FirstName, Lastname = Input.LastName, Balance = 10.00m, ProfilePicture = "default.png"};
 
                 await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);

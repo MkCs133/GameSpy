@@ -2,7 +2,6 @@ using GameSpy.Areas.Identity.Data;
 using GameSpy.Models;
 using GameSpy.Service;
 using GameSpy.Service.GameS;
-using GameSpy.Service.PcS;
 using GameSpy.Service.UserS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -25,7 +24,6 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IGameService, GameService>();
-builder.Services.AddScoped<IPcService, PcService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 

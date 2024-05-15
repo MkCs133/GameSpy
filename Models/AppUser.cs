@@ -10,9 +10,9 @@ public partial class AppUser : IdentityUser
 
     public string Lastname { get; set; } = null!;
 
-    public decimal Balance { get; set; }
+    public string ProfilePicture { get; set; }             
 
-    public virtual ICollection<Pc> Pcs { get; set; } = new List<Pc>();
+    public decimal Balance { get; set; }
 
     public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 

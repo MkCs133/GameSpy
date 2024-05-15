@@ -109,7 +109,7 @@ namespace GameSpy.Service.UserS
                     throw new Exception("This user does not exist!!!");
 
                 _mapper.Map<AppUser, AppUser>(updatedUser, user);
-
+                user.NormalizedUserName = updatedUser.UserName.ToUpper();
                 await _context.SaveChangesAsync();
 
             }

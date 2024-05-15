@@ -1,0 +1,26 @@
+﻿.ff-utnr {
+    font-family: 'Times New Roman';
+    color: #00b8ff;
+}
+
+.my-border {
+    border: 1px solid #00b8ff;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+.bg-grid {
+    display: grid;
+    grid-template: "region";
+}
+
+.help-body {
+    grid-area: region;
+    background-color: #0e1938;
+}
+
+.help-info {
+    grid-area: region;
+}
