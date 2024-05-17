@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B0bXoruW97VdAmadjCFONzMTGophlNSdM0UPq1leEVY=",
+  "Hash": "tkirtyxYmSCsnOoYF1Y/Az3nm+GzmeIQwybgLxUHY0Y=",
   "Source": "GameSpy",
   "BasePath": "_content/GameSpy",
   "Mode": "Default",
@@ -2012,6 +2012,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\profilePictures\\default.png"
     },
     {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\fff00ff9cf604790f8758a55ca73b787efff20d6_2000x2000.heic",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/profilePictures/fff00ff9cf604790f8758a55ca73b787efff20d6_2000x2000.heic",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\profilePictures\\fff00ff9cf604790f8758a55ca73b787efff20d6_2000x2000.heic"
+    },
+    {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\friend.png",
       "SourceId": "GameSpy",
       "SourceType": "Discovered",
@@ -2050,6 +2069,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\profilePictures\\profilePictrue.png"
     },
     {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\viber_image_2024-04-09_17-03-09-816.jpg",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "assets/profilePictures/viber_image_2024-04-09_17-03-09-816.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\profilePictures\\viber_image_2024-04-09_17-03-09-816.jpg"
+    },
+    {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\settings.png",
       "SourceId": "GameSpy",
       "SourceType": "Discovered",
@@ -2086,6 +2124,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\user.png"
+    },
+    {
+      "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\forgotPassword.css",
+      "SourceId": "GameSpy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\",
+      "BasePath": "_content/GameSpy",
+      "RelativePath": "css/forgotPassword.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\forgotPassword.css"
     },
     {
       "Identity": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\help.css",

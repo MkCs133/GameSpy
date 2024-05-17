@@ -139,3 +139,18 @@
     background-color: #00b8ff;
     color: black;
 }
+
+a {
+    font-size: 30pt;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-internal-autofill-selected,
+input:-internal-autofill-previewed {
+    background-color: #212529 !important;
+    -webkit-box-shadow: 0 0 0 30px #212529 inset !important;
+    -webkit-text-fill-color: #00b8ff !important;
+}

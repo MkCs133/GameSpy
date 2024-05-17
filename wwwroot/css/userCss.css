@@ -2,6 +2,15 @@
   background-color: #00ff90;
   padding: 0px;
 }
+
+.no-recently-played {
+    color: #0f1011;
+}
+
+.f-size-18 {
+    font-size: 18pt;
+}
+
 li {
     background-color: #221e1e;
     font-size: 10pt;
@@ -216,20 +225,4 @@ figure {
         -webkit-mask: none;
         color: #ffff;
     }
-
-.pwd-reset-submit-button {
-    width: 100px;
-    height: 150px;
-    background-color: #212529;
-    margin: 15px auto 15px auto;
-}
-
-.pwd-reset-submit-button:hover {
-    color:black;
-    cursor:pointer;
-    width: 15%;
-    height: 50px;
-    background-color: #00b8ff;
-    margin: 15px auto 15px auto;
-}
 }

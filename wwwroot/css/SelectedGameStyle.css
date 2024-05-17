@@ -10,17 +10,16 @@
 
 .selected-grid {
     display: grid;
-    grid-template: region;
+    grid-template:"region";
 }
 
 .selected-bg {
-    grid-area: region;
-    background-color: #0e1938;
+    background-color: #0e0e1a;
 }
 
 .selected-info {
     grid-area: region;
-    width: 90%;
+    width: 80%;
 }
 
 .description-label {

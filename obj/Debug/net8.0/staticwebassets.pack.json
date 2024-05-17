@@ -177,12 +177,20 @@
       "PackagePath": "staticwebassets\\assets\\profilePictures\\default.png"
     },
     {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\fff00ff9cf604790f8758a55ca73b787efff20d6_2000x2000.heic",
+      "PackagePath": "staticwebassets\\assets\\profilePictures\\fff00ff9cf604790f8758a55ca73b787efff20d6_2000x2000.heic"
+    },
+    {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\friend.png",
       "PackagePath": "staticwebassets\\assets\\profilePictures\\friend.png"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\profilePictrue.png",
       "PackagePath": "staticwebassets\\assets\\profilePictures\\profilePictrue.png"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\profilePictures\\viber_image_2024-04-09_17-03-09-816.jpg",
+      "PackagePath": "staticwebassets\\assets\\profilePictures\\viber_image_2024-04-09_17-03-09-816.jpg"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\assets\\settings.png",
@@ -203,6 +211,10 @@
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\UserStyle.css",
       "PackagePath": "staticwebassets\\css\\UserStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\forgotPassword.css",
+      "PackagePath": "staticwebassets\\css\\forgotPassword.css"
     },
     {
       "Id": "C:\\Users\\goran\\source\\repos\\GameSpy\\wwwroot\\css\\help.css",

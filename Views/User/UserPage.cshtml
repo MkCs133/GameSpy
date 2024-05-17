@@ -37,12 +37,12 @@
             </div>
             <div class="h-54 w-100 d-flex">
                 <div class="flex-grow-1 h-25">
-                    <p class=" ff-utnr text-center">Games</p>
-                    <p class =" ff-utnr text-center">@Model.NumberOfGames</p>
+                    <p class=" ff-utnr text-center f-size-18">Games</p>
+                    <p class=" ff-utnr text-center f-size-18">@Model.NumberOfGames</p>
                 </div>
                 <div class="flex-grow-1 h-25">
-                    <p class=" ff-utnr text-center">Achievements</p>
-                    <p class=" ff-utnr text-center">@Model.NumberOfAchievements</p>
+                    <p class=" ff-utnr text-center f-size-18">Achievements</p>
+                    <p class=" ff-utnr text-center f-size-18">@Model.NumberOfAchievements</p>
                 </div>
             </div>
         </div>
@@ -51,39 +51,61 @@
                 <h2 class="ff-utnr">Recently Played</h2>
             </div>
             <div class="h-28 d-flex w-100 overflow-auto">
-                @for (int i=0; i< 6; i++)
-                {
+                @{
                     if (Model.RecentGames.Count != 0)
                     {
-                        <a asp-controller="Game" asp-action="SelectedGame" asp-route-id="@Model.RecentGames[i].Gameid">
-                            <div class="d-inline-block">
-                                <figure class="mx-3 mt-2 game-holder" style="--c:#fff5">
-                                    <img class="custom-image-size" src="~/assets/games/@Model.RecentGames[i].Image" alt="@Model.RecentGames[i].Image">
-                                    <figcaption>@Model.RecentGames[i].Name</figcaption>
-                                </figure>
-                            </div>
-                        </a>
+                        for (int i = 0; i < 6; i++)
+                        {
+                            <a asp-controller="Game" asp-action="SelectedGame" asp-route-id="@Model.RecentGames[i].Gameid">
+                                <div class="d-inline-block">
+                                    <figure class="mx-3 mt-2 game-holder" style="--c:#fff5">
+                                        <img class="custom-image-size" src="~/assets/games/@Model.RecentGames[i].Image" alt="@Model.RecentGames[i].Image">
+                                        <figcaption>@Model.RecentGames[i].Name</figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        }
+                    }
+                    else
+                    {
+                        <div class="w-100 h-100 align-content-center">
+                            <h3 class="align-text-center ff-utnr">No Recently Played Games</h3>
+                        </div>
                     }
                 }
+
             </div>
             <div class="h-8 pt-1">
                 <div class="h-20 w-100 px-3">
                     <h2 class=" ff-utnr">Your Games</h2>
                 </div>
             </div>
-            <div class="h-54 d-inline-block overflow-auto">
-                @foreach (GameDTO game in Model.Games)
-                {
-                    <a asp-controller="Game" asp-action="SelectedGame" asp-route-id="@game.Gameid">
-                        <div class="d-inline-block">
-                            <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
-                                <img class="custom-image-size" src="~/assets/games/@game.Image" alt="@game.Image">
-                                <figcaption>@game.Name</figcaption>
-                            </figure>
+
+                @{
+                    if (Model.Games.Count != 0)
+                    {
+                        <div class="h-54 d-inline-block overflow-auto">
+                            @foreach (GameDTO game in Model.Games)
+                            {
+                                <a asp-controller="Game" asp-action="SelectedGame" asp-route-id="@game.Gameid">
+                                    <div class="d-inline-block">
+                                        <figure class="mx-3 game-holder mt-3" style="--c:#fff5">
+                                            <img class="custom-image-size" src="~/assets/games/@game.Image" alt="@game.Image">
+                                            <figcaption>@game.Name</figcaption>
+                                        </figure>
+                                    </div>
+                                </a>
+                            }
                         </div>
-                    </a>
+
+                    }
+                    else
+                    {
+                        <div class="w-100 h-54 align-content-center">
+                            <h2 class="align-text-center ff-utnr">You did not played any game yet!</h2>
+                        </div>
+                    }
                 }
-            </div>
         </div>
         <div class="col-2 my-border">
             <div class="h-9 d-flex bottom-border px-2">
