@@ -1,0 +1,50 @@
+﻿@model GameSpy.Models.AppUser
+
+<head>
+    <link rel="stylesheet" href="~/css/userSettings.css"/> 
+</head>
+<body>
+    <div id="body" class="container-fluid  vh-100 align-content-center m-0">
+        <form method="post" asp-controller="User" asp-action="UpdateBalance" asp-route-id="@Model.Id">
+            <div class="h-75 w-75 bg-dark my-border mx-auto rounded">
+                <div class= "payment-grid ff-utnr py-4></div">
+                    <div class="payment-total d-flex flex-column">
+                        <label class="flex-grow-1 mx-3 my-2">Total</label>
+                        <input class="flex-grow-1 mx-3 bg-dark ff-utnr text-decoration-underline my-border rounded my-2" asp-for="@Model.Balance" value="" placeholder="00.00 $" id="balance"></input>
+                    </div> 
+                    <div class="payment-first-name d-flex flex-column">
+                        <label class="flex-grow-1 mx-3" for="firstName">First Name</label>
+                        <input class="flex-grow-1 bg-dark ff-utnr mx-3 my-border rounded my-2" placeholder="FirstName" id="firstName"></input>
+                    </div>
+                    <div class="payment-last-name d-flex flex-column">
+                        <label class="flex-grow-1 mx-3" for="lastName">Last Name</label>
+                        <input class="flex-grow-1 bg-dark ff-utnr mx-3 my-border rounded my-2" placeholder="LastName" id="lastName"></input>
+                    </div>
+                    <div class="payment-card-number d-flex flex-column">
+                        <label class="flex-grow-1 mx-3" for="cardNumber">Card Number</label>
+                        <input class="flex-grow-1 bg-dark ff-utnr mx-3 my-border rounded my-2" placeholder="Card Number" id="cardNumber"></input>
+                    </div>
+                    <div class="payment-cvv d-flex flex-column">
+                        <label class="flex-grow-1 mx-3" for="cvv">CVV</label>
+                        <input class="flex-grow-1 bg-dark ff-utnr mx-3 my-border rounded my-2" placeholder="CVV" id="cvv"></input>
+                    </div>
+                    <div class="payment-cards d-flex mx-3 justify-content-between">
+                        <img src="~/assets/masterCard.png" class="payment-card-image"></img>
+                        <img src="~/assets/maestroCard.png" class="payment-card-image"></img>
+                        <img src="~/assets/visa.png" class="payment-card-image"></img>
+                        <img src="~/assets/discover.png" class="payment-card-image"></img>
+                        <img src="~/assets/jcb.jpg" class="payment-card-image"></img>
+                        <img src="~/assets/paypal.png" class="payment-card-image"></img>
+                    </div>
+                    <div class="payment-card-expire-date d-flex flex-column">
+                        <label class="flex-grow-1 mx-3" for="date">Expiration Date</label>
+                        <input class="flex-grow-1 bg-dark ff-utnr mx-3 my-border rounded my-2" placeholder="MM/YY" id="date"></input>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-content-center h-25">
+                    <button class=" my-border ff-utnr rounded payment-submit-button" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

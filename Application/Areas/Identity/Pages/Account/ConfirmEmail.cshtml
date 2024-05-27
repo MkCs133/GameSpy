@@ -1,0 +1,17 @@
+﻿@page
+@model ConfirmEmailModel
+@{
+    ViewData["Title"] = "Confirm email";
+}
+
+<head>
+    <link href="~/css/forgotPassword.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="body" class="container-fluid vh-100">
+        <div class="my-border rounded bg-dark ff-utnr">
+            <h1>@ViewData["Title"]</h1>
+            You have been successfully registered. Please <a asp-page="./Login">click here to log in</a>.
+        </div>
+    </div>
+</body>

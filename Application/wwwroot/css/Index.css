@@ -1,0 +1,54 @@
+﻿
+.buttons {
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    transition: 300ms;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+#login {
+    width: 20%;
+    height: 50px;
+    border: 1px solid #00b8ff;
+    color: #00b8ff;
+    padding-bottom: 5%;
+}
+
+#register {
+    width: 20%;
+    height: 50px;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    margin-top: 20px;
+}
+
+#reset {
+    width: 30%;
+    height: 70px;
+    border: 1px solid #fd4702;
+    color: #ff0000;
+    margin-top: 20px;
+}
+
+#login:hover {
+    background-color: #00b8ff;
+    border: 1px solid #ffffff;
+    color: #212529;
+    align-content: center;
+    padding-bottom: 5%;
+}
+
+#register:hover {
+    background-color: #ff0000;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+#reset:hover {
+    background-color: #fd4702;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}

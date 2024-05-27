@@ -1,0 +1,30 @@
+﻿@model AppUser
+
+<head>
+    <link rel="stylesheet" href="~/css/userSettings.css" />
+</head>
+
+<body class="container-fluid">
+    <form method="post" enctype="multipart/form-data" asp-action="ChangeUserImage" asp-route-id="@Model.Id">
+        <div id="body" class="w-100 vh-100 align-content-center ff-utnrr">
+            <div class="d-flex bg-dark flex-column mx-auto align-content-center ff-utnr justify-content-center my-border rounded central-card">
+                <div class="flex-grow-1 h-35 align-content-center">
+                    <div class="profile-picture">
+                        <img src="~/assets/profilePictures/@Model.ProfilePicture" alt="Loading..." />
+                        <label for="picture" class="d-flex align-items-center px-1">+</label>
+                        <input type="file" class="d-none" id="picture" name="file" onchange="form.submit()"></input>
+                    </div>
+                    <h2 class="mx-0 align-text-center">@Model.UserName</h2>
+                </div>
+                    <a asp-controller="User" asp-action="AddBalance" asp-route-id="@Model.Id" class="text-decoration-none h-10 flex-grow-1 my-border rounded border-bottom-0">Balance</a>
+                <a asp-controller="User" asp-action="UpdateUsername" asp-route-id="@Model.Id" class="text-decoration-none h-10 flex-grow-1 rounded my-border border-bottom-0">Username</a>
+                <a asp-area="Identity" asp-page="/Account/ForgotPassword" class="text-decoration-none h-10 flex-grow-1 my-border rounded border-bottom-0">Password</a>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+    AddPicture(){
+        
+    }
+</script>
